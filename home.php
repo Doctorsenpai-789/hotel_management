@@ -4,22 +4,22 @@
                 <div class="row h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-10 align-self-end mb-4">
                     	<div class="card" id="filter-book">
-                    		<div class="card-body">
-                    			<div class="container-fluid">
+                    		<div class="card-body" >
+                    			<div class="container-fluid" >
                     				<form action="index.php?page=list" id="filter" method="POST">
                     					<div class="row">
-                    						<div class="col-md-3">
-                    							<label for="">Chech-in Date</label>
-                    							<input type="text" class="form-control datepicker" name="date_in" autocomplete="off">
+                    						<div class="col-md-3" id="check">
+                    							<label for="">Check-in Date</label>
+                    							<input type="text" class="form-control datepicker rounded" name="date_in" autocomplete="off">
                     						</div>
                     						<div class="col-md-3">
-                    							<label for="">Chech-out Date</label>
-                    							<input type="text" class="form-control datepicker" name="date_out" autocomplete="off">
+                    							<label for="">Check-out Date</label>
+                    							<input type="text" class="form-control datepicker rounded" name="date_out" autocomplete="off">
                     						</div>
                     						
                     						<div class="col-md-3">
                     							<br>
-                    							<button class="btn-btn-block btn-primary mt-3">Check Availability</button>
+                    							<button class="btn-btn-block btn-primary mt-2 rounded">Check Availability</button>
                     						</div>
 
                     					</div>
@@ -44,7 +44,8 @@
                 	?>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="#">
-                            <img class="img-fluid" src="assets/img/<?php echo $row['cover_img'] ?>" alt="" />
+                            <img style ="border:1px solid black;"class="img-fluid rounded" src="assets/img/<?php echo $row['cover_img'] ?>" alt="" />
+
                             <div class="portfolio-box-caption">
                                 <div class="project-category text-white-30"><?php echo "$ ".number_format($row['price'],2) ?> per day</div>
                                 <div class="project-name"><?php echo $row['name'] ?></div>
