@@ -11,9 +11,15 @@
             </div>
         </header>
 
-    <section class="page-section">
-        <div class="container">
-    <?php echo html_entity_decode($_SESSION['setting_about_content']) ?>        
-            
+  
+
+        <div class="container mt-5">
+        <div class="row justify-content-center align-items-center">
+        <img style="border:7px solid black;" class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBHGqj4Dt1qIOAQWAFjB9J-wnMRGvU7dn_E_81LPQlpFLZTQjMy8H3pmTVRX_mo4h9P8&usqp=CAU" alt="">
+        &nbsp;&nbsp; &nbsp;
+        <img style="border:7px solid black;"    class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBHGqj4Dt1qIOAQWAFjB9J-wnMRGvU7dn_E_81LPQlpFLZTQjMy8H3pmTVRX_mo4h9P8&usqp=CAU" alt="">
+        
+         <h5 class="mt-5">We are the owner the this hotel management and we offer it to you i hope you enjoy and check in now!!!</h5>
         </div>
-        </section>
+        </div>
+         

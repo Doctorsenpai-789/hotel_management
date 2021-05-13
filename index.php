@@ -14,9 +14,13 @@
 
     <style>
     	header.masthead {
-		  background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>);
-		  background-repeat: no-repeat;
-		  background-size: cover;
+      /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
+      background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg');
+      background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+      
+      
 		}
     </style>
     <body id="page-top">
