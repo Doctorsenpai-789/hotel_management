@@ -2,6 +2,10 @@
 $date_in = isset($_POST['date_in']) ? $_POST['date_in'] : date('Y-m-d');
 $date_out = isset($_POST['date_out']) ? $_POST['date_out'] : date('Y-m-d',strtotime(date('Y-m-d').' + 3 days'));
 ?>
+<style>
+
+
+</style>
 
 	 <!-- Masthead-->
         <header class="masthead">
@@ -16,7 +20,7 @@ $date_out = isset($_POST['date_out']) ? $_POST['date_out'] : date('Y-m-d',strtot
             </div>
         </header>
 
-<section class="page-section bg-dark">
+<section class="page-section bg-dark " >
 		
 		<div class="container">	
 				<div class="col-lg-12">	

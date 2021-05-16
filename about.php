@@ -15,11 +15,12 @@
 
         <div class="container mt-5">
         <div class="row justify-content-center align-items-center">
-        <img style="border:7px solid black;" class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBHGqj4Dt1qIOAQWAFjB9J-wnMRGvU7dn_E_81LPQlpFLZTQjMy8H3pmTVRX_mo4h9P8&usqp=CAU" alt="">
+        <img style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;" class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBHGqj4Dt1qIOAQWAFjB9J-wnMRGvU7dn_E_81LPQlpFLZTQjMy8H3pmTVRX_mo4h9P8&usqp=CAU" alt="">
         &nbsp;&nbsp; &nbsp;
-        <img style="border:7px solid black;"    class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBHGqj4Dt1qIOAQWAFjB9J-wnMRGvU7dn_E_81LPQlpFLZTQjMy8H3pmTVRX_mo4h9P8&usqp=CAU" alt="">
+        <img style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;"    class="rounded" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYBHGqj4Dt1qIOAQWAFjB9J-wnMRGvU7dn_E_81LPQlpFLZTQjMy8H3pmTVRX_mo4h9P8&usqp=CAU" alt="">
         
-         <h5 class="mt-5">We are the owner the this hotel management and we offer it to you i hope you enjoy and check in now!!!</h5>
+         <h6 class="mt-5">The most memorable rest time starts here.
+         We give you everything right here, where you need it.</h6>
         </div>
         </div>
          

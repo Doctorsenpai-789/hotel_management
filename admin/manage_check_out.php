@@ -33,10 +33,13 @@ if($_GET['id']){
 	<p><b>Room Price : </b><?php echo '$'.number_format($cat['price'],2) ?></p>
 	<p><b>Reference no : </b><?php echo $ref_no ?></p>
 	<p><b>Checked In : </b><?php echo $name ?></p>
+	<p><b>Email : </b><?php echo $email ?></p>
 	<p><b>Contact no : </b><?php echo $contact_no ?></p>
 	<p><b>Check-in Date/Time : </b><?php echo date("M d, Y h:i A",strtotime($date_in)) ?></p>
 	<p><b>Check-out Date/Time : </b><?php echo date("M d, Y h:i A",strtotime($date_out)) ?></p>
 	<p><b>Days : </b><?php echo $calc_days ?></p>
+	<p><b>Payment Method : </b><?php echo $calc_days ?></p>
+
 	<p><b>Amount (Price * Days) : </b><?php echo '$'.number_format($cat['price'] * $calc_days ,2) ?></p>
 	
 		<div class="row">
