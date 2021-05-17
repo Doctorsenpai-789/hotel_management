@@ -141,6 +141,7 @@ Class Action {
 		$data = " room_id = '$rid' ";
 		$data .= ", name = '$name' ";
 		$data .= ", contact_no = '$contact' ";
+		
 		$data .= ", status = 1 ";
 
 		$data .= ", date_in = '".$date_in.' '.$date_in_time."' ";
@@ -180,17 +181,31 @@ Class Action {
 
 	}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32648888d748735caa65f042f93a4179916b0135
 	function save_book(){
 		extract($_POST);
 		$data = " booked_cid = '$cid' ";
 		$data .= ", name = '$name' ";
+		$data .= ", email = '$email' ";
 		$data .= ", contact_no = '$contact' ";
+       
 		$data .= ", status = 0 ";
+		
 
 		$data .= ", date_in = '".$date_in.' '.$date_in_time."' ";
 		$out= date("Y-m-d H:i",strtotime($date_in.' '.$date_in_time.' +'.$days.' days'));
 		$data .= ", date_out = '$out' ";
+		
+		
+		
+		$payment_Method = $data .= ", payment_Method ='$payment_Method' ";
+		
+		
+
+
 		$i = 1;
 		while($i== 1){
 			$ref  = sprintf("%'.04d\n",mt_rand(1,9999999999));
@@ -200,7 +215,7 @@ Class Action {
 		$data .= ", ref_no = '$ref' ";
 
 			$save = $this->db->query("INSERT INTO checked set ".$data);
-			$id=$this->db->insert_id;
+			$id = $this->db->insert_id;
 		
 		if($save){
 					return $id;

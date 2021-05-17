@@ -27,14 +27,28 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 	body{
 		width: 100%;
 	    height: calc(100%);
-	    /*background: #007bff;*/
+		background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg');
+		/* background: url(../assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
+		background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+		color:white;
 	}
-	main#main{
+	.card{
+        width: 100%;
+        height: 350px;
+        margin: 0 auto;
+        /* background-color: rgba(255,255,255,0.2); */
+		background: #0000002e;
+		border:1px solid white;
+}
+
+	/* main#main{
 		width:100%;
 		height: calc(100%);
 		background:white;
-	}
-	#login-right{
+	} */
+	/* #login-right{
 		position: absolute;
 		right:0;
 		width:40%;
@@ -42,8 +56,8 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 		background:white;
 		display: flex;
 		align-items: center;
-	}
-	#login-left{
+	} */
+	/* #login-left{
 		position: absolute;
 		left:0;
 		width:60%;
@@ -51,8 +65,8 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 		background:#00000061;
 		display: flex;
 		align-items: center;
-	}
-	#login-right .card{
+	} */
+	/* #login-right .card{
 		margin: auto
 	}
 	.logo {
@@ -62,44 +76,52 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 	    padding: .5em 0.8em;
 	    border-radius: 50% 50%;
 	    color: #000000b3;
-	}
-	#login-left {
+	} */
+	/* #login-left {
 	  background: url(../assets/img/<?php echo $_SESSION['setting_cover_img'] ?>);
+	  background-image:url('https://www.discoverlosangeles.com/sites/default/files/images/2019-01/hollywood-roosevelt-tropicana-pool.jpg?width=1600&height=1200&fit=crop&quality=78&auto=webp');
 	  background-repeat: no-repeat;
 	  background-size: cover;
-	}
+	} */
 </style>
 
 <body>
 
 
-  <main id="main" class=" alert-info">
-  		<div id="login-left">
+
+  
   			<!-- == You can logo or image herre == -->
   			<!-- <div class="logo">
   				<i class="fa fa-poll-h"></i>
   			</div> -->
-  		</div>
-  		<div id="login-right">
-  			<div class="card col-md-8">
+  		   <div class="container">
+            <div class="row justify-content-center " style="margin-top:160px;">
+  			 <div class="card col-md-4 ">
   				<div class="card-body">
   					<form id="login-form" >
   						<div class="form-group">
+							  <i class="fas fa-user"></i>
   							<label for="username" class="control-label">Username</label>
-  							<input type="text" id="username" name="username" class="form-control">
+  							<input type="text" id="username" name="username" class="form-control ">
   						</div>
   						<div class="form-group">
+						    <i class="fas fa-lock"></i>
   							<label for="password" class="control-label">Password</label>
   							<input type="password" id="password" name="password" class="form-control">
+							 <br>
+                         <input type="checkbox" onclick="myFunction()"> Show password
   						</div>
-  						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
+  						<center>
+						
+							  <button class="btn-sm btn-block btn-wave col-md-4 btn-primary rounded">Login</button></center>
   					</form>
   				</div>
-  			</div>
-  		</div>
-   
+				<p> <a href="/hotel/index.php">back</p>
+  			  </div>
+			</div>
+		</div>
 
-  </main>
+
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
@@ -132,5 +154,14 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 			}
 		})
 	})
+
+	function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
 </script>	
 </html>

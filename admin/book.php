@@ -7,7 +7,7 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 ?>
 <div class="container-fluid">
 	
-	<form action="" id="manage-check">
+	<form action="" id="manage-check" method="get">
 		<input type="hidden" name="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: '' ?>">
 		<input type="hidden" name="rid" value="<?php echo isset($_GET['rid']) ? $_GET['rid']: '' ?>">
 
@@ -15,6 +15,10 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 		<div class="form-group">
 			<label for="name">Name</label>
 			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
+		</div>
+		<div class="form-group">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" class="form-control" value="<?php echo isset($meta['email']) ? $meta['email']: '' ?>" required>
 		</div>
 		<div class="form-group">
 			<label for="contact">Contact #</label>
@@ -31,6 +35,22 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 		<div class="form-group">
 			<label for="days">Days of Stay</label>
 			<input type="number" min ="1" name="days" id="days" class="form-control" value="<?php echo isset($_GET['in']) ? $calc_days: 1 ?>" required readonly>
+		</div>
+
+		<!-- <div class="form-group">
+			<label for="name">Payment Method</label>
+			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['payment_Method']) ? $meta['payment_Method']: '' ?>" required>
+		</div> -->
+		
+		<div class="form-group">
+			<label for="name" >Payment Method</label>
+			<select id="payment_Method" name ="payment_Method"   value="<?php echo isset($_GET['payment_Method']) ? $_GET['payment_Method']: '' ?>" class="form-control">
+				<option name ="palawan" id="palawan"  >Palawan</option>
+				<option name ="g-cash"  id="g-cash"  >G-cash</option>
+				<option name ="credit"  id="credit"  >Credit card</option>
+				<option name ="checks"  id="checks"  >Checks</option>
+				<option name ="mhuiller" id="mhuiller"  >Mhuiller</option>
+			</select>
 		</div>
 	</form>
 </div>
