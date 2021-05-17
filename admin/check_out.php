@@ -29,7 +29,7 @@ while($row = $room->fetch_assoc()){
 								<?php 
 								$i = 1;
 								$checked = $conn->query("SELECT * FROM checked where status != 0 order by status desc, id asc ");
-								while($row=$checked->fetch_assoc()):
+								while ($row = $checked->fetch_assoc()):
 								?>
 								<tr>
 									<td class="text-center"><?php echo $i++ ?></td>

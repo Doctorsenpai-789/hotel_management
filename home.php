@@ -14,30 +14,28 @@ body{
  </style>
  
  <!-- Masthead-->
-        <header class="masthead">
+        <header class="masthead">   
             <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="row h-100 align-items-center justify-content-center">
                     <div class="col-lg-10 align-self-end mb-4">
                     	<div class="card" id="filter-book">
                     		<div class="card-body" >
                     			<div class="container-fluid" >
-                    				<form action="index.php?page=list" id="filter" method="POST">
-                    					<div class="row justify-content-center">
-                    						<div class="col-md-3" id="check">
-                    							<h5>Check-in Date</h5>
-                    							<input type="text" class="form-control datepicker rounded" name="date_in" autocomplete="off">
-                    						</div>
-                    						<div class="col-md-3">
-                    							<h5>Check-out Date</h5>
-                    							<input type="text" class="form-control datepicker rounded" name="date_out" autocomplete="off">
-                    						</div>
-                    						
-                    						<div class="col-md-3">
-                    						<br>
-                    							<button class="btn-btn-block btn-primary mt-1 rounded">Check Availability</button>
-                    						</div>
-                    					</div>
-                    				</form>
+									<form action="index.php?page=list" id="filter" method="POST">
+										<div class="form-row">
+											<div class="col-md-4 mb-3"  id="check">
+												<label for="check-in" class="pull-left">Check-in Date</label>
+												<input type="text" class="form-control datepicker rounded" name="date_in" autocomplete="off">
+											</div>
+											<div class="col-md-4 mb-3">
+												<label for="check-out">Check-out Date</label>
+												<input type="text" class="form-control datepicker rounded" name="date_out" autocomplete="off">
+											</div>
+											<div class="col-md-4 mb-3" style="margin-top:31px;">
+												   <button class="btn-btn-block btn-primary rounded w-100 p-2">Check Availability</button>
+									        </div>
+										</div>
+									</form>
                     			</div>
                     		</div>
                     	</div>

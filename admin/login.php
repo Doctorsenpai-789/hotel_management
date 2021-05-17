@@ -24,6 +24,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 
 </head>
 <style>
+
 	body{
 		width: 100%;
 	    height: calc(100%);
@@ -86,17 +87,13 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 </style>
 
 <body>
-
-
-
-  
-  			<!-- == You can logo or image herre == -->
-  			<!-- <div class="logo">
-  				<i class="fa fa-poll-h"></i>
-  			</div> -->
   		   <div class="container">
+			 <br>
+			 <a href="../index.php" class="btn btn-success mt-5 ">< back</a>
             <div class="row justify-content-center " style="margin-top:160px;">
+			
   			 <div class="card col-md-4 ">
+			   
   				<div class="card-body">
   					<form id="login-form" >
   						<div class="form-group">
@@ -109,14 +106,14 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
   							<label for="password" class="control-label">Password</label>
   							<input type="password" id="password" name="password" class="form-control">
 							 <br>
-                         <input type="checkbox" onclick="myFunction()"> Show password
+                            <input type="checkbox" onclick="myFunction()"> Show password
   						</div>
   						<center>
-						
-							  <button class="btn-sm btn-block btn-wave col-md-4 btn-primary rounded">Login</button></center>
+						    <button class="btn-sm btn-block btn-wave col-md-4 btn-primary rounded">Login</button>	
+						</center>
   					</form>
   				</div>
-				<p> <a href="/hotel/index.php">back</p>
+				 
   			  </div>
 			</div>
 		</div>
