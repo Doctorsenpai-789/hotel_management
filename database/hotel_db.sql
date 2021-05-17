@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2020 at 10:41 AM
+-- Generation Time: May 17, 2021 at 09:49 AM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,9 +32,11 @@ CREATE TABLE `checked` (
   `ref_no` varchar(100) NOT NULL,
   `room_id` int(30) NOT NULL,
   `name` text NOT NULL,
+  `email` varchar(255) NOT NULL,
   `contact_no` varchar(20) NOT NULL,
   `date_in` datetime NOT NULL,
   `date_out` datetime NOT NULL,
+  `payment_Method` varchar(255) NOT NULL,
   `booked_cid` int(30) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT '0 = pending, 1=checked in , 2 = checked out',
   `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -44,12 +46,12 @@ CREATE TABLE `checked` (
 -- Dumping data for table `checked`
 --
 
-INSERT INTO `checked` (`id`, `ref_no`, `room_id`, `name`, `contact_no`, `date_in`, `date_out`, `booked_cid`, `status`, `date_updated`) VALUES
-(4, '0000\n', 1, 'John Smith', '+14526-5455-44', '2020-09-19 11:48:09', '2020-09-22 11:48:09', 0, 2, '2020-09-19 13:11:34'),
-(5, '9564082520\n', 1, 'John Smith', '+14526-5455-44', '2020-09-19 11:48:33', '2020-09-22 11:48:33', 0, 2, '2020-09-19 13:12:19'),
-(6, '2765813481\n', 1, 'asdasd asdas as', '8747808787', '2020-09-19 13:16:00', '2020-09-24 13:16:00', 0, 2, '2020-09-19 13:43:21'),
-(7, '4392831400\n', 3, 'Sample', '5205525544', '2020-09-19 13:00:00', '2020-09-23 13:00:00', 0, 2, '2020-09-19 16:00:55'),
-(10, '6479004224\n', 1, 'John Smith', '+14526-5455-44', '2020-09-23 10:31:00', '2020-09-29 10:31:00', 3, 1, '2020-09-19 16:39:59');
+INSERT INTO `checked` (`id`, `ref_no`, `room_id`, `name`, `email`, `contact_no`, `date_in`, `date_out`, `payment_Method`, `booked_cid`, `status`, `date_updated`) VALUES
+(1, '7449604024\n', 0, 'lexi', '', '09546313468', '2021-05-17 04:01:00', '2021-05-20 04:01:00', '', 3, 2, '2021-05-17 10:01:47'),
+(2, '4940396835\n', 0, 'lexi', '', '09546313468', '2021-05-17 04:03:00', '2021-05-20 04:03:00', '', 3, 0, '2021-05-17 10:03:16'),
+(3, '5107433222\n', 0, 's', '', '09546313468', '2021-05-17 04:08:00', '2021-05-20 04:08:00', '', 3, 0, '2021-05-17 10:08:57'),
+(4, '9445092880\n', 0, 'james', '', 'aldrin', '2021-05-17 09:23:00', '2021-05-20 09:23:00', '', 3, 0, '2021-05-17 15:26:10'),
+(5, '7309577324\n', 0, 'james', 'odiongaldrin@gmail.com', 'aldrin', '2021-05-17 09:39:00', '2021-05-20 09:39:00', 'Credit card', 2, 0, '2021-05-17 15:41:53');
 
 -- --------------------------------------------------------
 
@@ -70,7 +72,7 @@ CREATE TABLE `rooms` (
 
 INSERT INTO `rooms` (`id`, `room`, `category_id`, `status`) VALUES
 (1, 'Room-101', 3, 1),
-(3, 'Room-102', 2, 0);
+(3, 'Room-102', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -180,7 +182,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `checked`
 --
 ALTER TABLE `checked`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `rooms`
