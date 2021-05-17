@@ -1,10 +1,13 @@
 <?php
 session_start();
+
+
 Class Action {
 	private $db;
 
 	public function __construct() {
 		ob_start();
+
    	include 'db_connect.php';
     
     $this->db = $conn;
@@ -30,6 +33,7 @@ Class Action {
 			return 3;
 		}
 	}
+
 	function logout(){
 		session_destroy();
 		foreach ($_SESSION as $key => $value) {
@@ -103,12 +107,14 @@ Class Action {
 		if($save)
 			return 1;
 	}
+
 	function delete_category(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM room_categories where id = ".$id);
 		if($delete)
 			return 1;
 	}
+
 	function save_room(){
 		extract($_POST);
 		$data = " room = '$room' ";
@@ -146,6 +152,7 @@ Class Action {
 			if($this->db->query("SELECT * FROM checked where ref_no ='$ref'")->num_rows <= 0)
 				$i=0;
 		}
+
 		$data .= ", ref_no = '$ref' ";
 
 		if(empty($id)){
@@ -160,16 +167,20 @@ Class Action {
 					return $id;
 		}
 	}
+
 	function save_checkout(){
 		extract($_POST);
-			$save = $this->db->query("UPDATE checked set status = 2 where id=".$id);
+			$save = $this->db->query("UPDATE checked set status = 2 where id = ".$id);
 			if($save){
 
 				$this->db->query("UPDATE rooms set status = 0 where id=".$rid);
 						return 1;
+						
 			}
 
 	}
+
+
 	function save_book(){
 		extract($_POST);
 		$data = " booked_cid = '$cid' ";
