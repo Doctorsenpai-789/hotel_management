@@ -38,7 +38,7 @@ if($_GET['id']){
 	<p><b>Check-in Date/Time : </b><?php echo date("M d, Y h:i A",strtotime($date_in)) ?></p>
 	<p><b>Check-out Date/Time : </b><?php echo date("M d, Y h:i A",strtotime($date_out)) ?></p>
 	<p><b>Days : </b><?php echo $calc_days ?></p>
-	<p><b>Payment Method : </b><?php echo $calc_days ?></p>
+	<p><b>Payment Method : </b><?php echo $payment_Method ?></p>
 
 	<p><b>Amount (Price * Days) : </b><?php echo '$'.number_format($cat['price'] * $calc_days ,2) ?></p>
 	

@@ -104,7 +104,7 @@ a.custom-menu-list span.icon{
 			<div class="col-lg-12">
 			<div class="card">
 				<div class="card-body">
-<?php //var_dump($_SESSION)  ?>
+                   <?php //var_dump($_SESSION)  ?>
 									
 				</div>
 			</div>

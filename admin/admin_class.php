@@ -181,10 +181,6 @@ Class Action {
 
 	}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 32648888d748735caa65f042f93a4179916b0135
 	function save_book(){
 		extract($_POST);
 		$data = " booked_cid = '$cid' ";

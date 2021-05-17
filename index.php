@@ -17,8 +17,8 @@
       /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
       background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg');
       background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+      background-size: 100% 100%;
+      background-attachment: fixed;
       
       
 		}
@@ -38,7 +38,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list">Rooms</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/hotel/admin ">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin">Admin</a></li>
                     </ul>
                 </div>
             </div>
