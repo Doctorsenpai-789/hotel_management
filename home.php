@@ -61,8 +61,8 @@ body{
                     <div class=" col-sm-3 m-3 ml-5">
                         <a class="portfolio-box" href="#">
                             <img class="img-fluid m-2" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;" src="assets/img/<?php echo $row['cover_img'] ?>" alt="" />
-                            <div class="portfolio-box-caption" style="background-color:pink;height:250px;width:253px;">
-                                <div class="project-category text-black-30"><?php echo "$ ".number_format($row['price'],2) ?>  per day</div>
+                            <div class="portfolio-box-caption " style="background-color:pink;height:325px;width:353px;">
+                                <div class="project-category text-black-30 m-5"><?php echo "$ ".number_format($row['price'],2) ?>  per day</div>
                                 <div class="project-name"><?php echo $row['name'] ?></div>
                             </div>
                         </a>
