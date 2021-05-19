@@ -32,19 +32,11 @@ background-attachment: fixed;
 	</div>
 </header>
 
-<<<<<<< HEAD
 <section class="page-section text-dark" >
 		    <div class="container">	
 				<div class="row justify-content-center">
 				<div class="col-lg-11">	
 						<div class="card  bg-dark text-white"  data-aos="fade-up" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
-=======
-<section class="page-section bg-dark " >
-		
-		    <div class="container">	
-				<div class="col-lg-12">	
-						<div class="card">
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 						    	<div class="card-body">	
 						         	<form action="index.php?page=list" id="filter" method="POST">
 										<div class="form-row">
@@ -82,7 +74,6 @@ background-attachment: fixed;
 			
 						<div class="card item-rooms mb-3 mt-5"  data-aos="fade-up" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
 							<div class="card-body">
-<<<<<<< HEAD
 								<div class="row ">
 									<div class="col-md-5">
 										<img src="assets/img/<?php echo $cat_arr[$row['category_id']]['cover_img'] ?>" alt="">
@@ -97,20 +88,6 @@ background-attachment: fixed;
 										<div class="align-self-end mt-5">
 											<button class="btn btn-primary book_now" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
 										</div>
-=======
-								<div class="row">
-								<div class="col-md-5">
-									<img src="assets/img/<?php echo $cat_arr[$row['category_id']]['cover_img'] ?>" alt="">
-								</div>
-								<div class="col-md-5" height="100%">
-									<h3><b><?php echo '$ '.number_format($cat_arr[$row['category_id']]['price'],2) ?></b><span> / per day</span></h3>
-
-									<h4><b>
-										<?php echo $cat_arr[$row['category_id']]['name'] ?>
-									</b></h4>
-									<div class="align-self-end mt-5">
-										<button class="btn btn-primary  float-right book_now" type="button" data-id="<?php echo $row['category_id'] ?>"><i class="fa fa-book" aria-hidden="true"></i>  Book now</button>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 									</div>
 								
 							    </div>
@@ -119,13 +96,9 @@ background-attachment: fixed;
 						</div>
 
 						<?php endwhile; ?>
-<<<<<<< HEAD
 						
 					</div>
 				</div>
-=======
-						</div>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 			</div>	
 		</div>	
 </section>

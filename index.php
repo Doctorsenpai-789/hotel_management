@@ -12,7 +12,6 @@
         }
     ?>
 
-<<<<<<< HEAD
 <style>
 
 body{
@@ -39,38 +38,6 @@ body{
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Admin</a></li>
                 </ul>
-=======
-    <style>
-    	header.masthead {
-      /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
-      background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg');
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-attachment: fixed;
-      
-      
-		}
-    </style>
-    <body id="page-top">
-        <!-- Navigation-->
-        <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-body text-white">
-        </div>
-      </div>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_hotel_name'] ?></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin">Admin</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin">Admin</a></li>
-                    </ul>
-                </div>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
             </div>
         </div>
     </nav>

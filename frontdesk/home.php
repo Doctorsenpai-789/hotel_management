@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <style>
-=======
-<!-- <style>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 	.custom-menu {
         z-index: 1000;
 	    position: absolute;
