@@ -51,6 +51,41 @@ background-attachment: fixed;
                 </div>
             </div>
         </header>
+
+		<header class="masthead">   
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center">
+                    <div class="col-lg-10 align-self-end mb-4">
+                    	<div class="card" id="filter-book">
+                    		<div class="card-body" >
+                    			<div class="container-fluid" >
+									<form action="index.php?page=list" id="filter" method="POST">
+										
+									    <div class="form-row">
+											<div class="col-md-4"  id="check">
+												<label for="check-in" class="pull-left">Check-in Date</label>
+												<input type="text" class="form-control datepicker rounded" name="date_in" autocomplete="off">
+											</div>
+											<div class="col-md-4 ">
+												<label for="check-out">Check-out Date</label>
+												<input type="text" class="form-control datepicker rounded" name="date_out" autocomplete="off">
+											</div>
+
+											<div class="col-md-4 " >
+												   <button class="btn-btn-block btn-primary rounded">Check Availability</button>
+										   </div>
+										</div>
+
+									</form>
+                    			</div>
+                    		</div>
+                    	</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </header>
+
 		<br>
 		<br>
 	    <div id="portfolio">
