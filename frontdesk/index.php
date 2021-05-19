@@ -17,6 +17,14 @@
   if(!isset($_SESSION['login_id']))
     header('location:login.php');
  include('./header.php'); 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+ // include('./auth.php'); 
+>>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+>>>>>>> 9cb8687db32f62f68aed70936ce0242287113fa8
  ?>
 
 </head>
@@ -34,9 +42,20 @@
     </div>
   </div>
   <main id="view-panel" >
+<<<<<<< HEAD
 
       <?php $page = isset($_GET['page']) ? $_GET['page'] :'book'; ?>
      	<?php include $page.'.php' ?>
+=======
+<<<<<<< HEAD
+
+      <?php $page = isset($_GET['page']) ? $_GET['page'] :'book'; ?>
+     	<?php include $page.'.php' ?>
+=======
+      <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
+  	<?php include $page.'.php' ?>
+>>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+>>>>>>> 9cb8687db32f62f68aed70936ce0242287113fa8
   	
 
   </main>
