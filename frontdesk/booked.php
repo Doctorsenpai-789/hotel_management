@@ -1,4 +1,5 @@
 <?php include('db_connect.php'); 
+
 $cat = $conn->query("SELECT * FROM room_categories");
 $cat_arr = array();
 while($row = $cat->fetch_assoc()){

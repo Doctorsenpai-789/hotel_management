@@ -18,9 +18,10 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
     </div>
     <div class="form-group col-md-6">
 	    <label for="contact">Contact #</label>
+
 	    <input type="number" name="contact" id="contact" class="form-control" value="<?php echo isset($meta['contact_no']) ? $meta['contact_no']: '' ?>" required>
-	
-    </div>
+
+	</div>
   </div>
   <div class="form-group">
         <label for="email">Email</label>

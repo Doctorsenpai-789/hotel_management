@@ -1,5 +1,6 @@
 <?php 
 include('db_connect.php');
+
 if($_GET['id']){
 	$id = $_GET['id'];
 	$qry = $conn->query("SELECT * FROM checked where id =".$id);
@@ -8,15 +9,18 @@ if($_GET['id']){
 			$$k=$v;
 		}
 	}
+
 	if($room_id > 0){
-	$room = $conn->query("SELECT * FROM rooms where id =".$room_id)->fetch_array();
-	$cat = $conn->query("SELECT * FROM room_categories where id =".$room['category_id'])->fetch_array();
+		$room = $conn->query("SELECT * FROM rooms where id =".$room_id)->fetch_array();
+		$cat = $conn->query("SELECT * FROM room_categories where id =".$room['category_id'])->fetch_array();
 }else{
 	$cat = $conn->query("SELECT * FROM room_categories where id =".$booked_cid)->fetch_array();
 
 }
+
  $calc_days = abs(strtotime($date_out) - strtotime($date_in)) ; 
  $calc_days =floor($calc_days / (60*60*24)  );
+
 }
 ?>
 <style>
@@ -48,7 +52,7 @@ if($_GET['id']){
 					<button type="button" class="btn btn-primary" id="checkout">Checkout</button>
 				</div>
 				<div class="col-md-3">
-					<button type="button" class="btn btn-primary" id="edit_checkin">Edit</button>
+					<button type="button" class="btn btn-success" id="edit_checkin">Edit</button>
 				</div>
 		<?php endif; ?>	
 				<div class="col-md-3">
