@@ -105,7 +105,11 @@ a.custom-menu-list span.icon{
 			<div class="card">
 				<div class="card-body">
                    <?php //var_dump($_SESSION)  ?>
+<<<<<<< HEAD
+									
+=======
 
+>>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 				</div>
 			</div>
 

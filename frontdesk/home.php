@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<style>
+=======
 <!-- <style>
+>>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 	.custom-menu {
         z-index: 1000;
 	    position: absolute;
@@ -63,7 +67,11 @@ a.custom-menu-list span.icon{
 	    left: -.7em;
 	    top: -.7em;
 	}
+<<<<<<< HEAD
+	
+=======
 
+>>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 	.candidate img {
     height: 100%;
     width: 100%;
@@ -105,6 +113,13 @@ a.custom-menu-list span.icon{
 			<div class="card">
 				<div class="card-body">
                    <?php //var_dump($_SESSION)  ?>
+<<<<<<< HEAD
+									
+				</div>
+			</div>
+			
+		</div>
+=======
 
 				</div>
 			</div>
@@ -214,10 +229,16 @@ a.custom-menu-list span.icon{
 				</div>
 			</div>
 			<!-- Table Panel -->
+>>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
 		</div>
 	</div>
 
 </div>
+<<<<<<< HEAD
+<script>
+	
+</script>
+=======
 <style>
 	img#cimg,.cimg{
 		max-height: 10vh;
@@ -328,3 +349,4 @@ a.custom-menu-list span.icon{
 		})
 	})
 </script>
+>>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
