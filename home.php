@@ -38,8 +38,8 @@ background-attachment: fixed;
 												<input type="text" class="form-control datepicker rounded" name="date_out" autocomplete="off">
 											</div>
 
-											<div class="col-md-4 mb-3" style="margin-top:29px;">
-												   <button class="btn-btn-block btn-primary rounded w-100 p-1 h-100">Check Availability</button>
+											<div class="col-md-4 mb-3" >
+												   <button class="btn-btn-block btn-primary rounded w-100">Check Availability</button>
 										   </div>
 										</div>
 									</form>
