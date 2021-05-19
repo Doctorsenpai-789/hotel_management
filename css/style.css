@@ -1,0 +1,11 @@
+html, body {
+    font-family: 'Montserrat';
+    font-size: 14px;
+}
+
+header.masthead {
+    /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
+    background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
