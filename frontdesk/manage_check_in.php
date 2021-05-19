@@ -23,14 +23,14 @@ while($row = $cat->fetch_assoc()){
 	<form action="" id="manage-check">
 		<input type="hidden" name="id" value="<?php echo isset($meta['id']) ? $meta['id']: '' ?>">
 		<?php if(isset($_GET['id'])):
-			$rooms = $conn->query("SELECT * FROM rooms where status =0 or id = $rid order by id asc");
+			$rooms = $conn->query("SELECT * FROM rooms where status = 0 or id = $rid order by id asc");
 		 ?>
 
 		<div class="form-group">
 			<label for="name">Room</label>
 			<select name="rid" id="" class="custom-select browser-default">
 				
-				<?php while($row=$rooms->fetch_assoc()): ?>
+				<?php while($row = $rooms->fetch_assoc()): ?>
 				<option value="<?php echo $row['id'] ?>" <?php echo $row['id'] == $rid ? "selected": '' ?>><?php echo $row['room'] . " | ". ($cat_arr[$row['category_id']]['name']) ?></option>
 				<?php endwhile; ?>
 			</select>
@@ -47,13 +47,13 @@ while($row = $cat->fetch_assoc()){
 			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
 		</div>
 		<div class="form-group">
-<<<<<<< HEAD
-=======
+
+
 			<label for="name">Email</label>
 			<input type="email" name="email" id="email" class="form-control" value="<?php echo isset($meta['email']) ? $meta['email']: '' ?>" required>
 		</div>
 		<div class="form-group">
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+
 			<label for="contact">Contact #</label>
 			<input type="text" name="contact" id="contact" class="form-control" value="<?php echo isset($meta['contact_no']) ? $meta['contact_no']: '' ?>" required>
 		</div>
@@ -69,8 +69,8 @@ while($row = $cat->fetch_assoc()){
 			<label for="days">Days of Stay</label>
 			<input type="number" min ="1" name="days" id="days" class="form-control" value="<?php echo isset($meta['date_in']) ? $calc_days: 1 ?>" required>
 		</div>
-<<<<<<< HEAD
-=======
+
+
 		<div class="form-group">
 	       <label for="name" >Payment Method</label>
 			<select id="payment_Method" name ="payment_Method"   value="<?php echo isset($_GET['payment_Method']) ? $_GET['payment_Method']: '' ?>" class="form-control">
@@ -81,7 +81,7 @@ while($row = $cat->fetch_assoc()){
 				<option name ="mhuiller" id="mhuiller"  >Mhuiller</option>
 			</select>
     </div>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+
 	</form>
 </div>
 <script>

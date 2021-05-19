@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin | Hotel Management System</title>
+  <title>FrontDesk | Senpai Hotel</title>
  	
 
 <?php include('./header.php'); ?>
@@ -89,7 +89,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 <body>
   		   <div class="container">
 			 <br>
-			 <a href="../index.php" class="btn btn-success mt-5 ">< back</a>
+			 <a href="../index.php" class="btn btn-success mt-5 ">Back</a>
             <div class="row justify-content-center " style="margin-top:160px;">
 			
   			 <div class="card col-md-4 ">
@@ -143,11 +143,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 				if(resp == 1){
 					location.href ='index.php?page=home';
 				}else if(resp == 2){
-<<<<<<< HEAD
-					location.href ='voting.php';
-=======
-					location.href ='frontdesk/index.php?page=home';
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+					location.href ='index.php?page=booked';
 				}else{
 					$('#login-form').prepend('<div class="alert alert-danger">Username or password is incorrect.</div>')
 					$('#login-form button[type="button"]').removeAttr('disabled').html('Login');

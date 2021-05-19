@@ -88,7 +88,7 @@ background-attachment: fixed;
 										<div class="align-self-end mt-5">
 											<button class="btn btn-primary book_now" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
 										</div>
-								
+									</div>
 								
 							    </div>
 
@@ -96,6 +96,7 @@ background-attachment: fixed;
 						</div>
 
 						<?php endwhile; ?>
+						
 					</div>
 				</div>
 			</div>	
