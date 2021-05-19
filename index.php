@@ -12,34 +12,6 @@
         }
     ?>
 
-<<<<<<< HEAD
-<style>
-
-body{
-    font-family: 'Montserrat';
-    font-size: 14px;
-	  color:white;
-  }
-</style>
-
-<body>
-    <!-- Navigation-->
-    <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
-       <div class="toast-body text-white">
-      </div>
-    </div>
-    <nav class="navbar navbar-expand-lg fixed-top py-3" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_hotel_name'] ?></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0" >
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home" style="font-size: 16px;">Home</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list" style="font-size: 16px;">Rooms</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Admin</a></li>
-                </ul>
-=======
     <style>
     	header.masthead {
       /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
@@ -67,10 +39,9 @@ body{
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list">Rooms</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin">Admin</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./frontdesk/index.php?page=admin">FrontDesk</a></li>
                     </ul>
                 </div>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
             </div>
         </div>
     </nav>

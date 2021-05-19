@@ -5,23 +5,16 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-<<<<<<< HEAD
-  <title>Hotel Management System</title>
-=======
-  <title>Motel Management System</title>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+
+  <title>FrontDesk | Senpai Hotel</title>
+
  	
 
 <?php
 	session_start();
   if(!isset($_SESSION['login_id']))
     header('location:login.php');
- include('./header.php'); 
-<<<<<<< HEAD
-
-=======
- // include('./auth.php'); 
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+    include('./header.php'); 
  ?>
 
 </head>
@@ -39,14 +32,12 @@
     </div>
   </div>
   <main id="view-panel" >
-<<<<<<< HEAD
+
+      
 
       <?php $page = isset($_GET['page']) ? $_GET['page'] :'book'; ?>
      	<?php include $page.'.php' ?>
-=======
-      <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
-  	<?php include $page.'.php' ?>
->>>>>>> 431abebeb12ca7ff2f480df1fae056c7c5a94988
+
   	
 
   </main>
