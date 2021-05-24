@@ -38,7 +38,7 @@
 											</div>
 											
 											<div class="col-md-4 mb-3" style="margin-top:28px;height:45px;">
-												   <button class="btn btn-primary rounded w-100 p21">Check Availability</button>
+												   <button class="btn  rounded w-100 text-white" style="background:#f4623a">Check Availability</button>
 									        </div>
 										</div>
 

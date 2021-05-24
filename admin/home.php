@@ -78,6 +78,8 @@
 								<?php
                                  $i = 1;
                                  $cats = $conn->query("SELECT * FROM room_categories order by id asc");
+								//  $count = mysql_num_rows($cats);
+								//  echo('<script>alert($count)</script>');
                                  while ($row = $cats->fetch_assoc()):
 	                             ?>
 								<tr>
@@ -140,6 +142,8 @@ while($row = $room->fetch_assoc()){
 								$i = 1;
 								$checked = $conn->query("SELECT * FROM checked where status != 0 order by status desc, id asc ");
 								while ($row = $checked->fetch_assoc()):
+									
+									
 								?>
 								<tr>
 									<td class="text-center"><?php echo $i++ ?></td>

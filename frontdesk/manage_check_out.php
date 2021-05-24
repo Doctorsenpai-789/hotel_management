@@ -1,6 +1,5 @@
 <?php 
 include('db_connect.php');
-
 if($_GET['id']){
 	$id = $_GET['id'];
 	$qry = $conn->query("SELECT * FROM checked where id =".$id);
@@ -9,18 +8,15 @@ if($_GET['id']){
 			$$k=$v;
 		}
 	}
-
 	if($room_id > 0){
-		$room = $conn->query("SELECT * FROM rooms where id =".$room_id)->fetch_array();
-		$cat = $conn->query("SELECT * FROM room_categories where id =".$room['category_id'])->fetch_array();
+	$room = $conn->query("SELECT * FROM rooms where id =".$room_id)->fetch_array();
+	$cat = $conn->query("SELECT * FROM room_categories where id =".$room['category_id'])->fetch_array();
 }else{
 	$cat = $conn->query("SELECT * FROM room_categories where id =".$booked_cid)->fetch_array();
 
 }
-
  $calc_days = abs(strtotime($date_out) - strtotime($date_in)) ; 
  $calc_days =floor($calc_days / (60*60*24)  );
-
 }
 ?>
 <style>
@@ -32,31 +28,69 @@ if($_GET['id']){
 	}
 </style>
 <div class="container-fluid">
-	<p><b>Room : </b><?php echo isset($room['room']) ? $room['room'] : 'NA' ?></p>
-	<p><b>Room Category : </b><?php echo $cat['name'] ?></p>
-	<p><b>Room Price : </b><?php echo '$'.number_format($cat['price'],2) ?></p>
-	<p><b>Reference no : </b><?php echo $ref_no ?></p>
-	<p><b>Checked In : </b><?php echo $name ?></p>
-	<p><b>Email : </b><?php echo $email ?></p>
-	<p><b>Contact no : </b><?php echo $contact_no ?></p>
-	<p><b>Check-in Date/Time : </b><?php echo date("M d, Y h:i A",strtotime($date_in)) ?></p>
-	<p><b>Check-out Date/Time : </b><?php echo date("M d, Y h:i A",strtotime($date_out)) ?></p>
-	<p><b>Days : </b><?php echo $calc_days ?></p>
-	<p><b>Payment Method : </b><?php echo $payment_Method ?></p>
-
-	<p><b>Amount (Price * Days) : </b><?php echo '$'.number_format($cat['price'] * $calc_days ,2) ?></p>
-	
+	<table class="table">
+     
+		  <td>	<p><b>Room : </b></p></td>
+		  <td><?php echo isset($room['room']) ? $room['room'] : 'NA' ?></td>
+	 
+	  <tr>
+		  <td><p><b>Room Category : </b></p></td>
+		  <td><?php echo $cat['name'] ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Room Price : </b></p></td>
+		  <td><?php echo '$'.number_format($cat['price'],2) ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Reference no : </b></p></td>
+		  <td><?php echo $ref_no ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Checked In : </b></p></td>
+		  <td><?php echo $name ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Email : </b></p></td>
+		  <td><?php echo $email ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Contact no : </b></p></td>
+		  <td><?php echo $contact_no ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Check-in : </b></p></td>
+		  <td><?php echo date("M d, Y h:i A",strtotime($date_in)) ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Check-out: </b></p></td>
+		  <td><?php echo date("M d, Y h:i A",strtotime($date_out)) ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Days : </b></p></td>
+		  <td><?php echo $calc_days ?></td>
+	  </tr>
+	  <tr>
+		  <td><p><b>Payment Method: </b></p></td>
+		  <td><?php echo $payment_Method ?></td>
+	  </tr>
+	  <tr>
+		  <!-- total = price times days -->
+		  <td><p><b>Total Amount: </b></p></td>
+		  <td><?php echo '$'.number_format($cat['price'] * $calc_days ,2) ?></td>
+	  </tr>
+	</table>
+	<hr>
 		<div class="row">
 			<?php if(isset($_GET['checkout']) && $status != 2): ?>
 				<div class="col-md-3">
 					<button type="button" class="btn btn-primary" id="checkout">Checkout</button>
 				</div>
 				<div class="col-md-3">
-					<button type="button" class="btn btn-success" id="edit_checkin">Edit</button>
+					<button type="button" class="btn btn-success ml-3" id="edit_checkin">Edit</button>
 				</div>
 		<?php endif; ?>	
 				<div class="col-md-3">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 				</div>
 		
 		</div>
