@@ -1,7 +1,7 @@
 
 <nav id="sidebar" class='mx-lt-5' >
 		
-		<div class="sidebar-list">
+		<div class="sidebar-list mt-5">
 
 				<a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-home"></i></span> Dashboard</a>
 				<a href="index.php?page=booked" class="nav-item nav-booked"><span class='icon-field'><i class="fa fa-book"></i></span> Booked </a>

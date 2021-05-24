@@ -3,10 +3,10 @@ html, body {
   font-family: 'Montserrat';
 }
 
-.btn{
+/* .btn{
   color:white;
   background-color: #f4623a;
-}
+} */
 
 a {
   color: #f4623a;
@@ -170,9 +170,9 @@ template {
 }
 
 .img-fluid {
-  /* width: 100%;
-  height:90px; */
-  /* height: 26vw; */
+  width: 100%;
+  height:90px; 
+ height: 26vw;
 }
 
 .img-thumbnail {
@@ -183,6 +183,7 @@ template {
   max-width: 100%;
   height: auto;
 }
+
 
 .figure {
   display: inline-block;

@@ -127,8 +127,7 @@
                 <i class="fas fa-gem me-3"></i> Senpai Motel
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
+                Experience the fresh and comfort living by staying our motel.
               </p>
             </div>
             <!-- Grid column -->
@@ -137,19 +136,19 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-left" data-aos="fade-up-right">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                Products
+                Rooms
               </h6>
               <p>
-                <a href="#!" class="text-reset">Angular</a>
+                <a href="#!" class="text-reset">Twin Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">React</a>
+                <a href="#!" class="text-reset">Family Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Vue</a>
+                <a href="#!" class="text-reset">Single Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Laravel</a>
+                <a href="#!" class="text-reset">Couple Room</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -161,13 +160,13 @@
                 Useful links
               </h6>
               <p>
-                <a href="#!" class="text-reset">Pricing</a>
+                <a href="" class="text-reset">Fetatured Rooms</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Settings</a>
+                <a href="#!" class="text-reset">Book Now</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Orders</a>
+                <a href="#!" class="text-reset">About Us</a>
               </p>
               <p>
                 <a href="#!" class="text-reset">Help</a>
@@ -181,10 +180,10 @@
               <h6 class="text-uppercase fw-bold mb-4">
                 Contact
               </h6>
-              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p><i class="fas fa-home me-3"></i>Medellin, Cebu</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
-                info@example.com
+                senpaimotel@gmail.com
               </p>
               <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
@@ -199,7 +198,7 @@
       <!-- Copyright -->
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2021 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">senpaiHotel.com</a>
       </div>
       <!-- Copyright -->
     </footer>

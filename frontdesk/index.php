@@ -14,14 +14,16 @@
 	session_start();
   if(!isset($_SESSION['login_id']))
     header('location:login.php');
-    include('./header.php'); 
- ?>
+   include('./header.php'); 
+?>
 
 </head>
 <style>
+
 	body{
         background: #80808045;
   }
+
 </style>
 
 <body>
@@ -33,12 +35,10 @@
   </div>
   <main id="view-panel" >
 
-      
-
       <?php $page = isset($_GET['page']) ? $_GET['page'] :'book'; ?>
      	<?php include $page.'.php' ?>
-
-  	
+      <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
+    	<?php include $page.'.php' ?>
 
   </main>
 
