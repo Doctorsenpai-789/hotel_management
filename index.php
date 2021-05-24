@@ -12,34 +12,25 @@
         }
     ?>
 
-    <style>
-    	header.masthead {
-      /* background: url(assets/img/<?php echo $_SESSION['setting_cover_img'] ?>); */
-      background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg');
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-attachment: fixed;
-      
-      
-		}
-    </style>
     <body id="page-top">
+
         <!-- Navigation-->
         <div class="toast" id="alert_toast" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-body text-white">
+             <div class="toast-body text-white">
+             </div>
         </div>
-      </div>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_hotel_name'] ?></a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin">Admin</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./frontdesk/index.php?page=admin">FrontDesk</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home" style="font-size: 16px;">Home</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list" style="font-size: 16px;">Rooms</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./frontdesk/index.php?page=admin" style="font-size: 16px;">FrontDesk</a></li>
                     </ul>
                 </div>
             </div>
@@ -86,8 +77,9 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center text-lg-start bg-dark text-white" style="">
+<br/>
+  <!-- Footer -->
+  <footer class="text-center text-lg-start bg-dark text-white" style="">
       <!-- Section: Social media -->
       <section
         class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
@@ -135,8 +127,7 @@
                 <i class="fas fa-gem me-3"></i> Senpai Motel
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit.
+                Experience the fresh and comfort living by staying our motel.
               </p>
             </div>
             <!-- Grid column -->
@@ -145,19 +136,19 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 text-left" data-aos="fade-up-right">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">
-                Products
+                Rooms
               </h6>
               <p>
-                <a href="#!" class="text-reset">Angular</a>
+                <a href="#!" class="text-reset">Twin Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">React</a>
+                <a href="#!" class="text-reset">Family Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Vue</a>
+                <a href="#!" class="text-reset">Single Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Laravel</a>
+                <a href="#!" class="text-reset">Couple Room</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -169,13 +160,13 @@
                 Useful links
               </h6>
               <p>
-                <a href="#!" class="text-reset">Pricing</a>
+                <a href="" class="text-reset">Fetatured Rooms</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Settings</a>
+                <a href="#!" class="text-reset">Book Now</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Orders</a>
+                <a href="#!" class="text-reset">About Us</a>
               </p>
               <p>
                 <a href="#!" class="text-reset">Help</a>
@@ -189,10 +180,10 @@
               <h6 class="text-uppercase fw-bold mb-4">
                 Contact
               </h6>
-              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p><i class="fas fa-home me-3"></i>Medellin, Cebu</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
-                info@example.com
+                senpaimotel@gmail.com
               </p>
               <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
@@ -207,14 +198,13 @@
       <!-- Copyright -->
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2021 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">senpaiHotel.com</a>
       </div>
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
-          
-  <?php include('footer.php') ?>
 
+  <?php include('footer.php') ?>
   </body>
 
   <?php $conn->close() ?>

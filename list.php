@@ -11,21 +11,21 @@ header.masthead {
 background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
+margin-top:-13px;
 }
 
 .item-rooms img {
-        width: 23vw;
+    width: 23vw;
 }
 
 </style>
 
 <!-- Masthead-->
-<header class="masthead">
+<header class="masthead ">
 	<div class="container h-100">
 		<div class="row h-100 align-items-center justify-content-center text-center">
 			<div class="col-lg-10 align-self-end mb-4" style="background: #0000002e;">
-					<h1 class="text-uppercase text-white font-weight-bold">Rooms</h1>
-				<hr class="divider my-4" />
+					<h1 class="text-uppercase text-white font-weight-bold" data-aos="fade-up">Rooms</h1>
 			</div>
 			
 		</div>
@@ -33,10 +33,10 @@ background-attachment: fixed;
 </header>
 
 <section class="page-section text-dark" >
-		    <div class="container">	
-				<div class="row justify-content-center">
+	<div class="container">	
+			<div class="row justify-content-center">
 				<div class="col-lg-11">	
-						<div class="card  bg-dark text-white"  data-aos="fade-up" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+						<div class="card  bg-dark text-white mt-5"  data-aos="fade-up" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
 						    	<div class="card-body">	
 						         	<form action="index.php?page=list" id="filter" method="POST">
 										<div class="form-row">
@@ -56,9 +56,6 @@ background-attachment: fixed;
 						
 							   </div>
 						</div>	
-
-						<hr>	
-						
 						<?php 
 						
 						 $cat = $conn->query("SELECT * FROM room_categories");

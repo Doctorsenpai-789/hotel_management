@@ -8,7 +8,7 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 <div class="container-fluid">
 	
 
-    <form action="" id="manage-check" method="get">
+<form action="" id="manage-check" method="get">
   <input type="hidden" name="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: '' ?>">
   <input type="hidden" name="rid" value="<?php echo isset($_GET['rid']) ? $_GET['rid']: '' ?>">
   <div class="form-row">
@@ -60,6 +60,12 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 	$('#manage-check').submit(function(e){
 		e.preventDefault();
 		start_load()
+		let name = $('#name').val();
+		let contact = $('#contact').val();
+		let email = $('#email').val();
+        if(name!="" && contact != "" && email != ""){
+
+
 		$.ajax({
 			url:'admin/ajax.php?action=save_book',
 			method:'POST',
@@ -74,5 +80,11 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 				}
 			}
 		})
+		}
+		else{
+			alert("require all the fields");
+
+
+		}
 	})
 </script>

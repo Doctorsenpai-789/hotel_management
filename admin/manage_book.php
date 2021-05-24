@@ -2,7 +2,7 @@
 include('db_connect.php');
 if($_GET['id']){
 	$id = $_GET['id'];
-	$qry = $conn->query("SELECT * FROM checked where id =".$id);
+	$qry = $conn->query("SELECT * FROM book_record where id =".$id);
 	if($qry->num_rows > 0){
 		foreach($qry->fetch_array() as $k => $v){
 			$$k=$v;
@@ -81,21 +81,15 @@ if($_GET['id']){
 	</table>
 	<hr>
 		<div class="row">
-			<?php if(isset($_GET['checkout']) && $status != 2): ?>
-				<div class="col-md-3">
-					<button type="button" class="btn btn-primary" id="checkout">Checkout</button>
-				</div>
-				<div class="col-md-3">
-					<button type="button" class="btn btn-success ml-3" id="edit_checkin">Edit</button>
-				</div>
-		<?php endif; ?>	
 				<div class="col-md-3">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
 				</div>
 		
 		</div>
 </div>
-<script>
+
+<!-- <script>
+
 	$(document).ready(function(){
 		
 	})
@@ -118,4 +112,4 @@ if($_GET['id']){
 			}
 		})
 	})
-</script>
+</script> -->
