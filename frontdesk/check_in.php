@@ -1,6 +1,6 @@
 <?php include('db_connect.php'); ?>
 <div class="container-fluid">
-	<div class="col-lg-12">
+	<div class="col-lg-12  mt-5">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
@@ -26,7 +26,7 @@
 										</div> 
 										<div class="col-md-2">
 											<label for="" class="control-label">&nbsp</label>
-											<button class="btn btn-block btn-primary">Filter</button>
+											<button class="btn btn-block btn-info">Filter</button>
 										</div>
 									</div>
 								</form>

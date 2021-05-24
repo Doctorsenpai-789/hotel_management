@@ -1,18 +1,8 @@
-/**
-* Template Name: Medilab - v2.0.0
-* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
+body,html {
+  font-family: 'Montserrat';
   color: #444444;
-  width: 100%;
-  height: calc(100%);
+ 
 }
 
 a {
@@ -1622,7 +1612,6 @@ nav#sidebar {
     z-index: 99;
     left: 0;
     width: 250px;
-  
     background-repeat: no-repeat;
     background-size: cover;
 }

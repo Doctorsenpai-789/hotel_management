@@ -11,7 +11,7 @@ while($row = $room->fetch_assoc()){
 }
 ?>
 <div class="container-fluid">
-	<div class="col-lg-12">
+	<div class="col-lg-12 mt-5">
 		<div class="row mt-3">
 			<div class="col-md-12">
 				<div class="card">
@@ -37,7 +37,7 @@ while($row = $room->fetch_assoc()){
 									<td class=""><?php echo $room_arr[$row['room_id']]['room'] ?></td>
 									<td class=""><?php echo $row['ref_no'] ?></td>
 									<?php if($row['status'] == 1): ?>
-										<td class="text-center"><span class="badge badge-warning">Checked-IN</span></td>
+										<td class="text-center"><span class="badge badge-warning">Checked-In</span></td>
 									<?php else: ?>
 										<td class="text-center"><span class="badge badge-success">Checked-Out</span></td>
 									<?php endif; ?>
