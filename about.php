@@ -1,4 +1,16 @@
- <!-- Masthead-->
+<style>
+      header.masthead {
+	/* background: url("assets/img/<?php echo $_SESSION['setting_cover_img'] ?>");  */
+	background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg'); */
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top:-23px;
+	background-size: 100% 100%;
+	} 
+</style>
+
+
+<!-- Masthead-->
         <header class="masthead">
             <div class="container h-100">
                 <div class="row h-100 align-items-center justify-content-center text-center">
@@ -22,13 +34,8 @@
                 </iframe>&nbsp;&nbsp;Google Maps Generator by <a href="https://www.embedgooglemap.net">&nbsp;&nbsp;embedgooglemap.net</a>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
         <section class="page-section">
             <div class="container text-dark">
-
-            <?php echo html_entity_decode($_SESSION['setting_about_content']) ?>        
-            
+                <?php echo html_entity_decode($_SESSION['setting_about_content']) ?>         
             </div>
         </section>

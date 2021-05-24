@@ -37,8 +37,8 @@
 												<input type="text" class="form-control datepicker rounded" name="date_out" autocomplete="off">
 											</div>
 											
-											<div class="col-md-4 mb-3" style="margin-top:31px;height:20px;">
-												   <button class="btn rounded w-100 p-1">Check Availability</button>
+											<div class="col-md-4 mb-3" style="margin-top:28px;height:45px;">
+												   <button class="btn btn-primary rounded w-100 p21">Check Availability</button>
 									        </div>
 										</div>
 

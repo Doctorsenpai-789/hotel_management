@@ -2,18 +2,18 @@
 
 ?>
 
-<div class="container-fluid">
+<div class="container-fluid mt-4">
 	
-	<div class="row">
-	<div class="col-lg-12">
-			<button class="btn btn-primary float-right btn-sm m-3" id="new_user"><i class="fa fa-plus"></i> New user</button>
-	</div>
-	</div>
-	
-	<div class="row">
-		<div class="card col-lg-12">
+
+	<div class="row justify-content-center">
+		<div class="card col-lg-11">
+		<div class="float-right">
+			<div class="col-lg-12">
+					<button class="btn btn-primary float-right btn-sm m-3" id="new_user"><i class="fa fa-plus"></i> New user</button>
+			</div>
+			</div>
 			<div class="card-body">
-				<table class="table-striped table-bordered col-md-12">
+				<table class="table table-striped table-bordered col-md-12">
 					<thead class="bg-dark text-white">
 						<tr>
 							<th class="text-center">#</th>
@@ -40,10 +40,10 @@
 								<?php echo $row['username'] ?>
 							</td>
 							<td>
-								<center>
-										<div class="btn-group p-2">
-										<button type="button" class="btn btn-success">Action</button>
-										<button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								
+										<div class="btn-group">
+										<button type="button" class="btn btn-sm btn-success">Action</button>
+										<button type="button" class="btn btn-sm btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 											<span class="sr-only">Toggle Dropdown</span>
 										</button>
 										<div class="dropdown-menu">
@@ -52,7 +52,7 @@
 											<a class="dropdown-item delete_user" href="javascript:void(0)" data-id = '<?php echo $row['id'] ?>'>Delete</a>
 										</div>
 										</div>
-								</center>
+							
 								
 							</td>
 						</tr>

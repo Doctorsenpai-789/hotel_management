@@ -1,15 +1,23 @@
+<style>
+	img#cimg,.cimg{
+		max-height: 10vh;
+		max-width: 6vw;
+	}
+	td{
+		vertical-align: middle !important;
+	}
+</style>
 
 <?php include 'db_connect.php';?>
-<div class="container-fluid">
-
+<div class="container-fluid mt-5" >
 	<div class="col-lg-12">
 		<div class="row">
 			<!-- FORM Panel -->
 			<div class="col-md-4">
 			<form action="" id="check-monthly-booking">
 				<div class="card">
-					<div class="card-header">
-						    Room Category Form
+					<div class="card-header bg-dark text-white">
+						    Monthly Bookings
 				  	</div>
 					<div class="card-body">
 							<input type="hidden" name="id">
@@ -57,10 +65,10 @@
 				<div class="card">
 					<div class="card-body">
 						<table class="table table-bordered table-hover">
-							<thead>
+							<thead class="bg-dark text-white">
 								<tr>
 									<th class="text-center">#</th>
-									<th class="text-center">Month</th>
+									<th class="text-center">Room</th>
 									<th class="text-center">Book</th>
 									<th class="text-center">Action</th>
 								</tr>
@@ -77,14 +85,14 @@
 
 
 									<td class="text-center">
-										<img src="<?php echo isset($row['cover_img']) ? '../assets/img/' . $row['cover_img'] : '' ?>" alt="" id="cimg">
+										<img src="<?php echo isset($row['cover_img']) ? '../assets/img/' . $row['cover_img'] : '' ?>" alt="" id="cimg" height="60" width="200" >
 									</td>
 									<td class="">
 										<p>Name : <b><?php echo $row['name'] ?></b></p>
 										<p>Price : <b><?php echo "$" . number_format($row['price'], 2) ?></b></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-primary edit_cat" type="button" data-id="<?php echo $row['id'] ?>" data-name="<?php echo $row['name'] ?>" data-price="<?php echo $row['price'] ?>" data-cover_img="<?php echo $row['cover_img'] ?>">Edit</button>
+										<button class="btn btn-sm btn-success edit_cat" type="button" data-id="<?php echo $row['id'] ?>" data-name="<?php echo $row['name'] ?>" data-price="<?php echo $row['price'] ?>" data-cover_img="<?php echo $row['cover_img'] ?>">Edit</button>
 										<button class="btn btn-sm btn-danger delete_cat" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
 									</td>
 								</tr>
@@ -99,15 +107,75 @@
 	</div>
 
 </div>
-<style>
-	img#cimg,.cimg{
-		max-height: 10vh;
-		max-width: 6vw;
-	}
-	td{
-		vertical-align: middle !important;
-	}
-</style>
+
+<?php include('db_connect.php'); 
+$cat = $conn->query("SELECT * FROM room_categories");
+$cat_arr = array();
+while($row = $cat->fetch_assoc()){
+	$cat_arr[$row['id']] = $row;
+}
+$room = $conn->query("SELECT * FROM rooms");
+$room_arr = array();
+while($row = $room->fetch_assoc()){
+	$room_arr[$row['id']] = $row;
+}
+?>
+<div class="container-fluid">
+	<div class="col-lg-12 mt-5">
+		<div class="row mt-3">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-body">
+						<table class="table table-bordered">
+							<thead>
+								<th>#</th>
+								<th>Category</th>
+								<th>Room</th>
+								<th>Reference</th>
+								<th>Status</th>
+								<th>Action</th>
+							</thead>
+							<tbody>
+								<?php 
+								$i = 1;
+								$checked = $conn->query("SELECT * FROM checked where status != 0 order by status desc, id asc ");
+								while ($row = $checked->fetch_assoc()):
+								?>
+								<tr>
+									<td class="text-center"><?php echo $i++ ?></td>
+									<td class="text-center"><?php echo $cat_arr[$room_arr[$row['room_id']]['category_id']]['name'] ?></td>
+									<td class=""><?php echo $room_arr[$row['room_id']]['room'] ?></td>
+									<td class=""><?php echo $row['ref_no'] ?></td>
+									<?php if($row['status'] == 1): ?>
+										<td class="text-center"><span class="badge badge-warning">Checked-In</span></td>
+									<?php else: ?>
+										<td class="text-center"><span class="badge badge-success">Checked-Out</span></td>
+									<?php endif; ?>
+									<td class="text-center">
+											<button class="btn btn-sm btn-primary check_out" type="button" data-id="<?php echo $row['id'] ?>">View</button>
+									</td>
+								</tr>
+							<?php endwhile; ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$('table').dataTable()
+	$('.check_out').click(function(){
+		uni_modal("Check Out","manage_check_out.php?checkout=1&id="+$(this).attr("data-id"))
+	})
+	$('#filter').submit(function(e){
+		e.preventDefault()
+		location.replace('index.php?page=check_in&category_id='+$(this).find('[name="category_id"]').val()+'&status='+$(this).find('[name="status"]').val())
+	})
+</script>
+
 <script>
 	function displayImg(input,_this) {
 	    if (input.files && input.files[0]) {

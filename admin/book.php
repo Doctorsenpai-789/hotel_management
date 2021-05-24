@@ -8,7 +8,7 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 <div class="container-fluid">
 	
 
-    <form action="" id="manage-check" method="get">
+<form action="" id="manage-check" method="get">
   <input type="hidden" name="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: '' ?>">
   <input type="hidden" name="rid" value="<?php echo isset($_GET['rid']) ? $_GET['rid']: '' ?>">
   <div class="form-row">

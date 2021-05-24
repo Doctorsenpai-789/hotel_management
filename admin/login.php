@@ -37,7 +37,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 	}
 	.card{
         width: 100%;
-        height: 350px;
+        height: 400px;
         margin: 0 auto;
         /* background-color: rgba(255,255,255,0.2); */
 		background: #0000002e;
@@ -89,12 +89,13 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 <body>
   		   <div class="container">
 			 <br>
-			 <a href="../index.php" class="btn btn-success mt-5 ">< back</a>
+			 <a href="../index.php" class="btn btn-success mt-5 ">Back</a>
             <div class="row justify-content-center " style="margin-top:160px;">
 			
   			 <div class="card col-md-4 ">
 			   
   				<div class="card-body">
+					<br>
   					<form id="login-form" >
   						<div class="form-group">
 							  <i class="fas fa-user"></i>
@@ -112,6 +113,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 						    <button class="btn-sm btn-block btn-wave col-md-4 btn-primary rounded">Login</button>	
 						</center>
   					</form>
+					  <br>	
   				</div>
 				 
   			  </div>

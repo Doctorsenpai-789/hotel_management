@@ -2,23 +2,23 @@
 
 <div class="container-fluid">
 	
-	<div class="col-lg-12">
+	<div class="col-lg-16 mt-5">
 		<div class="row">
 			<!-- FORM Panel -->
 			<div class="col-md-4">
 			<form action="" id="manage-room">
 				<div class="card">
-					<div class="card-header">
-						    Room Form
+					<div class="card-header bg-dark text-white">
+						   <b> Room Form </b>
 				  	</div>
 					<div class="card-body">
 							<input type="hidden" name="id">
 							<div class="form-group">
-								<label class="control-label">Room</label>
+								<label class="control-label"><b>Room</b></label>
 								<input type="text" class="form-control" name="room">
 							</div>
 							<div class="form-group">
-								<label class="control-label">Category</label>
+								<label class="control-label"><b>Category</b></label>
 								<select class="custom-select browser-default" name="category_id">
 									<?php 
 									$cat = $conn->query("SELECT * FROM room_categories order by name asc ");
@@ -42,10 +42,10 @@
 					</div>
 							
 					<div class="card-footer">
-						<div class="row">
+						<div class="row ">
 							<div class="col-md-12">
-								<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Save</button>
-								<button class="btn btn-sm btn-default col-sm-3" type="button" onclick="$('#manage-room').get(0).reset()"> Cancel</button>
+								<button class="btn btn-sm btn-success col-sm-3  "> Save</button>
+								<button class="btn btn-sm btn-danger col-sm-3 p-1 " type="button" onclick="$('#manage-room').get(0).reset()"> Cancel</button>
 							</div>
 						</div>
 					</div>
@@ -86,8 +86,8 @@
 										<td class="text-center"><span class="badge badge-default">Unavailable</span></td>
 									<?php endif; ?>
 									<td class="text-center">
-										<button class="btn btn-sm btn-primary edit_cat" type="button" data-id="<?php echo $row['id'] ?>" data-room="<?php echo $row['room'] ?>" data-category_id="<?php echo $row['category_id'] ?>" data-status="<?php echo $row['status'] ?>">Edit</button>
-										<button class="btn btn-sm btn-danger delete_cat" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-sm btn-primary edit_cat" type="button" data-id="<?php echo $row['id'] ?>" data-room="<?php echo $row['room'] ?>" data-category_id="<?php echo $row['category_id'] ?>" data-status="<?php echo $row['status'] ?>"><i class="fa fa-pen-square"></i></button>
+										<button class="btn btn-sm btn-danger delete_cat" type="button" data-id="<?php echo $row['id'] ?>"><i class="fa fa-trash"></i></button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
