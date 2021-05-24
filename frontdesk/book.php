@@ -6,20 +6,19 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
  $calc_days =floor($calc_days / (60*60*24)  );
 ?>
 <div class="container-fluid">
-	
 
-<form action="" id="manage-check" method="get">
-  <input type="hidden" name="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: '' ?>">
-  <input type="hidden" name="rid" value="<?php echo isset($_GET['rid']) ? $_GET['rid']: '' ?>">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-	    <label for="name">Full Name</label>
-		<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
-    </div>
-    <div class="form-group col-md-6">
-	    <label for="contact">Contact #</label>
+  <form action="" id="manage-check" method="get">
+	<input type="hidden" name="cid" value="<?php echo isset($_GET['cid']) ? $_GET['cid']: '' ?>">
+	<input type="hidden" name="rid" value="<?php echo isset($_GET['rid']) ? $_GET['rid']: '' ?>">
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="name">Full Name</label>
+			<input type="text" name="name" id="name" class="form-control" value="<?php echo isset($meta['name']) ? $meta['name']: '' ?>" required>
+		</div>
+		<div class="form-group col-md-6">
+			<label for="contact">Contact #</label>
 
-	    <input type="number" name="contact" id="contact" class="form-control" value="<?php echo isset($meta['contact_no']) ? $meta['contact_no']: '' ?>" required>
+			<input type="number" name="contact" id="contact" class="form-control" value="<?php echo isset($meta['contact_no']) ? $meta['contact_no']: '' ?>" required>
 
 	</div>
   </div>

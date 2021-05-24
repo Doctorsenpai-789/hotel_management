@@ -38,7 +38,11 @@
 											</div>
 											
 											<div class="col-md-4 mb-3" style="margin-top:28px;height:45px;">
+<<<<<<< HEAD
 												   <button class="btn  rounded w-100 text-white" style="background:#f4623a">Check Availability</button>
+=======
+												   <button class="btn btn-primary rounded w-100 p21">Check Availability</button>
+>>>>>>> 0c7101cffbf7e8b5efd55d0f75570ab74a06e188
 									        </div>
 										</div>
 

@@ -12,17 +12,19 @@
 	session_start();
   if(!isset($_SESSION['login_id']))
     header('location:login.php');
-    include('./header.php'); 
- ?>
+   include('./header.php'); 
+?>
 
 </head>
 
 <style>
+
 	body{
         background: #80808045;
         font-family: 'Montserrat';
         color: #444444;
   }
+
 </style>
 
 <body>
