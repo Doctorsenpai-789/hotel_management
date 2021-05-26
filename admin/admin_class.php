@@ -165,6 +165,7 @@ Class Action {
 		}else{
 			$save = $this->db->query("UPDATE checked set ".$data." where id=".$id);
 		}
+		
 		if($save){
 
 			$this->db->query("UPDATE rooms set status = 1 where id=".$rid);

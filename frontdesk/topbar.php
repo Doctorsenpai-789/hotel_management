@@ -1,4 +1,5 @@
 <style>
+
 	.logo {
     margin: auto;
     font-size: 20px;
@@ -6,11 +7,12 @@
     padding: 5px 11px;
     border-radius: 50% 50%;
     color: #000000b3;
-}
+  }
 
-.navbar{
-  background-color: black;
-}
+  .navbar{
+    background-color: black;
+  }
+
 </style>
 
 <nav class="navbar navbar-dark fixed-top " style="padding:0;">
@@ -25,7 +27,7 @@
         <large><b><?php echo $_SESSION['setting_hotel_name']; ?></b></large>
       </div>
 	  	<div class="col-md-2 float-right text-white mt-2">
-	  		<a href="ajax.php?action=logout" class="text-white ml-5"><?php echo $_SESSION['login_name'] ?> <i class="fa fa-power-off ml-2"></i></a>
+	  		<a href="../admin/ajax.php?action=logout" class="text-white ml-5"><?php echo $_SESSION['login_name'] ?> <i class="fa fa-power-off ml-2"></i></a>
 	    </div>
     </div>
   </div>

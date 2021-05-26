@@ -1,14 +1,20 @@
-<?php include('db_connect.php'); 
-$cat = $conn->query("SELECT * FROM room_categories");
-$cat_arr = array();
-while($row = $cat->fetch_assoc()){
-	$cat_arr[$row['id']] = $row;
-}
-$room = $conn->query("SELECT * FROM rooms");
-$room_arr = array();
-while($row = $room->fetch_assoc()){
-	$room_arr[$row['id']] = $row;
-}
+<?php include('../admin/db_connect.php'); 
+
+
+	$cat = $conn->query("SELECT * FROM room_categories");
+	$cat_arr = array();
+
+	while($row = $cat->fetch_assoc()){
+		$cat_arr[$row['id']] = $row;
+	}
+
+	$room = $conn->query("SELECT * FROM rooms");
+	$room_arr = array();
+
+	while($row = $room->fetch_assoc()){
+		$room_arr[$row['id']] = $row;
+	}
+
 ?>
 <div class="container-fluid">
 	<div class="col-lg-12 mt-5">
@@ -56,12 +62,16 @@ while($row = $room->fetch_assoc()){
 </div>
 
 <script>
+
 	$('table').dataTable()
+
 	$('.check_out').click(function(){
 		uni_modal("Check Out","manage_check_out.php?checkout=1&id="+$(this).attr("data-id"))
 	})
+
 	$('#filter').submit(function(e){
 		e.preventDefault()
 		location.replace('index.php?page=check_in&category_id='+$(this).find('[name="category_id"]').val()+'&status='+$(this).find('[name="status"]').val())
 	})
+
 </script>

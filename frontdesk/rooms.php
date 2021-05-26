@@ -1,57 +1,60 @@
-<?php include('db_connect.php');?>
+<?php include('../admin/db_connect.php');?>
 
 <div class="container-fluid">
 	
 	<div class="col-lg-16 mt-5">
 		<div class="row">
-			<!-- FORM Panel -->
-			<div class="col-md-4">
-			<form action="" id="manage-room">
-				<div class="card">
-					<div class="card-header bg-dark text-white">
-						   <b> Room Form </b>
-				  	</div>
-					<div class="card-body">
-							<input type="hidden" name="id">
-							<div class="form-group">
-								<label class="control-label"><b>Room</b></label>
-								<input type="text" class="form-control" name="room">
-							</div>
-							<div class="form-group">
-								<label class="control-label"><b>Category</b></label>
-								<select class="custom-select browser-default" name="category_id">
-									<?php 
-									$cat = $conn->query("SELECT * FROM room_categories order by name asc ");
-									while($row= $cat->fetch_assoc()) {
-										$cat_name[$row['id']] = $row['name'];
-										?>
-										<option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
-									<?php
-									}
-									?>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="" class="control-label">Availability</label>
-								<select class="custom-select browser-default" name="status">
-									<option value="0">Available</option>
-									<option value="1">Unavailable</option>
 
-								</select>
-							</div>
-					</div>
-							
-					<div class="card-footer">
-						<div class="row ">
-							<div class="col-md-12">
-								<button class="btn btn-sm btn-success col-sm-3  "> Save</button>
-								<button class="btn btn-sm btn-danger col-sm-3 p-1 " type="button" onclick="$('#manage-room').get(0).reset()"> Cancel</button>
+			<!-- FORM Panel -->
+
+			<div class="col-md-4">
+				<form action="" id="manage-room">
+					<div class="card">
+						<div class="card-header bg-dark text-white">
+							<b> Room Form </b>
+						</div>
+						<div class="card-body">
+								<input type="hidden" name="id">
+								<div class="form-group">
+									<label class="control-label"><b>Room</b></label>
+									<input type="text" class="form-control" name="room">
+								</div>
+								<div class="form-group">
+									<label class="control-label"><b>Category</b></label>
+									<select class="custom-select browser-default" name="category_id">
+										<?php 
+										$cat = $conn->query("SELECT * FROM room_categories order by name asc ");
+										while($row= $cat->fetch_assoc()) {
+											$cat_name[$row['id']] = $row['name'];
+											?>
+											<option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+										<?php
+										}
+										?>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="" class="control-label">Availability</label>
+									<select class="custom-select browser-default" name="status">
+										<option value="0">Available</option>
+										<option value="1">Unavailable</option>
+
+									</select>
+								</div>
+						</div>
+								
+						<div class="card-footer">
+							<div class="row ">
+								<div class="col-md-12">
+									<button class="btn btn-sm btn-success col-sm-3  "> Save</button>
+									<button class="btn btn-sm btn-danger col-sm-3 p-1 " type="button" onclick="$('#manage-room').get(0).reset()"> Cancel</button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</form>
+				</form>
 			</div>
+
 			<!-- FORM Panel -->
 
 			<!-- Table Panel -->
@@ -99,26 +102,31 @@
 			<!-- Table Panel -->
 		</div>
 	</div>	
-
 </div>
 
 <script>
+
 	$('#manage-room').submit(function(e){
+
 		e.preventDefault()
 		start_load()
+
 		$.ajax({
-			url:'ajax.php?action=save_room',
+			url:'../admin/ajax.php?action=save_room',
 			method:"POST",
 			data: $(this).serialize(),
-			success:function(resp){
-				if(resp==1){
+			success:function(resp)
+			{
+				if(resp==1)
+				{
 					alert_toast("Data successfully added",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)
 
 				}
-				else if(resp==2){
+				else if(resp==2)
+				{
 					alert_toast("Data successfully updated",'success')
 					setTimeout(function(){
 						location.reload()
@@ -127,27 +135,41 @@
 				}
 			}
 		})
+
 	})
-	$('.edit_cat').click(function(){
+
+	$('.edit_cat').click(function()
+	{
 		start_load()
+
 		var cat = $('#manage-room')
+
 		cat.get(0).reset()
 		cat.find("[name='id']").val($(this).attr('data-id'))
 		cat.find("[name='room']").val($(this).attr('data-room'))
 		cat.find("[name='category_id']").val($(this).attr('data-category_id'))
 		cat.find("[name='status']").val($(this).attr('data-status'))
+
 		end_load()
+
 	})
+
+
 	$('.delete_cat').click(function(){
 		_conf("Are you sure to delete this room?","delete_cat",[$(this).attr('data-id')])
 	})
-	function delete_cat($id){
+    
+	function delete_cat($id)
+	{
 		start_load()
-		$.ajax({
-			url:'ajax.php?action=delete_room',
+
+		$.ajax(
+			{
+			url:'../admin/ajax.php?action=delete_room',
 			method:'POST',
 			data:{id:$id},
-			success:function(resp){
+			success:function(resp)
+			{
 				if(resp==1){
 					alert_toast("Data successfully deleted",'success')
 					setTimeout(function(){

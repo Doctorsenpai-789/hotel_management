@@ -1,45 +1,65 @@
-<?php include('db_connect.php');?>
+<?php 
+
+include('../admin/db_connect.php');
+
+?>
+
+<style>
+
+	img#cimg,.cimg
+	{
+		max-height: 10vh;
+		max-width: 6vw;
+	}
+
+	td
+	{
+		vertical-align: middle !important;
+	}
+
+</style>
 
 <div class="container-fluid">
 	
 	<div class="col-lg-12  mt-5">
 		<div class="row">
+
 			<!-- FORM Panel -->
 			<div class="col-md-4">
-			<form action="" id="manage-category">
-				<div class="card">
-					<div class="card-header bg-dark text-white">
-						    <b>Room Category Form</b>
-				  	</div>
-					<div class="card-body">
-							<input type="hidden" name="id">
-							<div class="form-group">
-								<label class="control-label"><b>Category</b></label>
-								<input type="text" class="form-control" name="name">
-							</div>
-							<div class="form-group">
-								<label class="control-label"><b>Price</b></label>
-								<input type="number" class="form-control text-right" name="price" step="any">
-							</div>
-							<div class="form-group">
-								<label for="" class="control-label"><b>Image</b></label>
-								<input type="file" class="form-control p-1" name="img" onchange="displayImg(this,$(this))" >
-							</div>
-							<div class="form-group">
-								<img src="<?php echo isset($image_path) ? '../assets/img/'.$cover_img :'' ?>" alt="" id="cimg">
-							</div>
-					</div>
-							
-					<div class="card-footer">
-						<div class="row">
-							<div class="col-md-12">
-								<button class="btn btn-sm btn-success col-sm-3 "> Save</button>
-								<button class="btn btn-sm btn-danger col-sm-3 p-1" type="button" onclick="$('#manage-category').get(0).reset()"> Cancel</button>
+				<form action="" id="manage-category">
+					<div class="card">
+						<div class="card-header bg-dark text-white">
+								<b>Room Category Form</b>
+						</div>
+						<div class="card-body">
+								<input type="hidden" name="id">
+								<div class="form-group">
+									<label class="control-label"><b>Category</b></label>
+									<input type="text" class="form-control" name="name">
+								</div>
+								<div class="form-group">
+									<label class="control-label"><b>Price</b></label>
+									<input type="number" class="form-control text-right" name="price" step="any">
+								</div>
+								<div class="form-group">
+									<label for="" class="control-label"><b>Image</b></label>
+									<input type="file" class="form-control p-1" name="img" onchange="displayImg(this,$(this))" >
+								</div>
+								<div class="form-group">
+									<img src="<?php echo isset($image_path) ? '../assets/img/'.$cover_img :'' ?>" alt="" id="cimg">
+								</div>
+						</div>
+								
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-md-12">
+									<button class="btn btn-sm btn-success col-sm-3 "> Save</button>
+									<button class="btn btn-sm btn-danger col-sm-3 p-1" type="button" onclick="$('#manage-category').get(0).reset()"> Cancel</button>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</form>
+				</form>
 			</div>
 			<!-- FORM Panel -->
 
@@ -89,19 +109,15 @@
 	</div>	
 
 </div>
-<style>
-	img#cimg,.cimg{
-		max-height: 10vh;
-		max-width: 6vw;
-	}
-	td{
-		vertical-align: middle !important;
-	}
-</style>
+
 <script>
-	function displayImg(input,_this) {
-	    if (input.files && input.files[0]) {
-	        var reader = new FileReader();
+
+	function displayImg(input,_this)
+	{
+		if (input.files && input.files[0])
+		{
+			var reader = new FileReader();
+			
 	        reader.onload = function (e) {
 	        	$('#cimg').attr('src', e.target.result);
 	        }
@@ -109,26 +125,33 @@
 	        reader.readAsDataURL(input.files[0]);
 	    }
 	}
-	$('#manage-category').submit(function(e){
+
+
+	$('#manage-category').submit(function(e)
+	{
 		e.preventDefault()
 		start_load()
+
 		$.ajax({
-			url:'ajax.php?action=save_category',
+			url:'../admin/ajax.php?action=save_category',
 			data: new FormData($(this)[0]),
 		    cache: false,
 		    contentType: false,
 		    processData: false,
 		    method: 'POST',
 		    type: 'POST',
-			success:function(resp){
-				if(resp==1){
+			success:function(resp)
+			{
+				if(resp==1)
+				{
 					alert_toast("Data successfully added",'success')
 					setTimeout(function(){
 						location.reload()
 					},1500)
 
 				}
-				else if(resp==2){
+				else if(resp==2)
+				{
 					alert_toast("Data successfully updated",'success')
 					setTimeout(function(){
 						location.reload()
@@ -138,21 +161,33 @@
 			}
 		})
 	})
-	$('.edit_cat').click(function(){
+
+	$('.edit_cat').click(function()
+	{
 		start_load()
+
 		var cat = $('#manage-category')
+
 		cat.get(0).reset()
 		cat.find("[name='id']").val($(this).attr('data-id'))
 		cat.find("[name='name']").val($(this).attr('data-name'))
 		cat.find("[name='price']").val($(this).attr('data-price'))
 		cat.find("#cimg").attr('src','../assets/img/'+$(this).attr('data-cover_img'))
+
 		end_load()
 	})
-	$('.delete_cat').click(function(){
+
+
+	$('.delete_cat').click(function()
+	{
 		_conf("Are you sure to delete this category?","delete_cat",[$(this).attr('data-id')])
 	})
-	function delete_cat($id){
+
+
+	function delete_cat($id)
+	{
 		start_load()
+
 		$.ajax({
 			url:'ajax.php?action=delete_category',
 			method:'POST',
@@ -167,5 +202,8 @@
 				}
 			}
 		})
+
 	}
+
+	
 </script>

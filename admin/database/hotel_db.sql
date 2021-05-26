@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2021 at 12:36 PM
+-- Generation Time: May 26, 2021 at 11:55 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `book_record`
 --
 
-CREATE TABLE `book_record` (
+CREATE TABLE `book_record`(
   `id` int(30) NOT NULL,
   `ref_no` varchar(100) NOT NULL,
   `room_id` int(30) NOT NULL,
@@ -51,7 +51,10 @@ INSERT INTO `book_record` (`id`, `ref_no`, `room_id`, `name`, `email`, `contact_
 (3, '9919023172\n', 0, 'Antonette Baterna', 'biorebaterna@gmail.com', '143', '2021-05-24 10:26:00', '2021-05-27 10:26:00', 'Palawan', 3, 0, '2021-05-24 16:27:17'),
 (4, '7948952731\n', 0, 'james', 'jericbaternakgo@gmail.com', '2324234', '2021-05-24 10:51:00', '2021-05-27 10:51:00', 'Mhuiller', 3, 0, '2021-05-24 16:52:10'),
 (5, '6734900993\n', 0, 'james', 'odiong@gmail.com', '0912365486', '2021-05-16 10:56:00', '2021-05-30 10:56:00', 'Palawan', 3, 0, '2021-05-24 16:56:20'),
-(6, '211007394\n', 0, 'april', 'april@gmailcom', '0912365486', '2021-05-24 12:16:00', '2021-05-27 12:16:00', 'Palawan', 3, 0, '2021-05-24 18:16:49');
+(6, '211007394\n', 0, 'april', 'april@gmailcom', '0912365486', '2021-05-24 12:16:00', '2021-05-27 12:16:00', 'Palawan', 3, 0, '2021-05-24 18:16:49'),
+(7, '4332805561\n', 0, 'Jenette Baterna', 'jericbaternakgo@gmail.com', '09123979022', '2021-05-29 10:05:00', '2021-05-31 10:05:00', 'Credit card', 3, 0, '2021-05-26 16:05:44'),
+(8, '4370871566\n', 0, 'James Paloager', 'jamespaloager@gmail.com', '0912365486', '2021-05-29 10:39:00', '2021-06-04 10:39:00', 'G-cash', 3, 0, '2021-05-26 16:40:23'),
+(9, '2307959290\n', 0, 'Jeric Baterna', 'baterna@gmail.com', '454644', '2021-05-29 11:22:00', '2021-06-05 11:22:00', 'Credit card', 3, 0, '2021-05-26 17:23:32');
 
 -- --------------------------------------------------------
 
@@ -80,29 +83,14 @@ CREATE TABLE `checked` (
 
 INSERT INTO `checked` (`id`, `ref_no`, `room_id`, `name`, `email`, `contact_no`, `date_in`, `date_out`, `payment_Method`, `booked_cid`, `status`, `date_updated`) VALUES
 (8, '2708265358\n', 1, 'james ', 'odiong@gmail.com', '0912365486', '2021-05-16 10:56:00', '2021-05-30 10:56:00', 'Palawan', 3, 2, '2021-05-24 18:26:33'),
-(9, '6124953174\n', 4, 'jeric ', 'jeric@gmail.com', '2324234', '2021-05-24 12:11:00', '2021-05-25 12:11:00', 'Palawan', 0, 1, '2021-05-24 18:12:02'),
-(10, '211007394\n', 0, 'april', 'april@gmailcom', '0912365486', '2021-05-24 12:16:00', '2021-05-27 12:16:00', 'Palawan', 3, 0, '2021-05-24 18:16:49');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `check_in`
---
-
-CREATE TABLE `check_in` (
-  `id` int(30) NOT NULL,
-  `ref_no` varchar(100) NOT NULL,
-  `room_id` int(30) NOT NULL,
-  `name` text NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `contact_no` varchar(20) NOT NULL,
-  `date_in` datetime NOT NULL,
-  `date_out` datetime NOT NULL,
-  `payment_Method` varchar(255) NOT NULL,
-  `booked_cid` int(30) NOT NULL,
-  `status` tinyint(1) NOT NULL DEFAULT 0 COMMENT '0 = pending, 1=checked in , 2 = checked out',
-  `date_updated` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+(9, '6124953174\n', 4, 'jeric ', 'jeric@gmail.com', '2324234', '2021-05-24 12:11:00', '2021-05-25 12:11:00', 'Palawan', 0, 2, '2021-05-26 15:11:40'),
+(11, '3295790182\n', 1, 'james', 'odiongaldrin@gmail.com', '0912365486', '2021-05-26 09:51:00', '2021-05-27 09:51:00', 'Palawan', 0, 1, '2021-05-26 15:51:46'),
+(12, '8191462239\n', 4, 'jeric', 'jericbaternakgo@gmail.com', '2324234', '2021-05-26 09:53:00', '2021-05-27 09:53:00', 'G-cash', 0, 1, '2021-05-26 15:53:23'),
+(13, '5889902917\n', 4, 'Jenette Baterna', 'jericbaternakgo@gmail.com', '09123979022', '2021-05-29 10:05:00', '2021-05-31 10:05:00', 'Credit card', 3, 1, '2021-05-26 16:33:56'),
+(14, '3809284857\n', 1, 'James Paloager', 'jamespaloager@gmail.com', '0912365486', '2021-05-29 10:39:00', '2021-06-04 10:39:00', 'Palawan', 3, 1, '2021-05-26 16:41:23'),
+(15, '180618654\n', 4, 'FrontDesk', 'odiongaldrin@gmail.com', '0912365486', '2021-05-28 10:53:00', '2021-05-29 10:53:00', 'Credit card', 0, 1, '2021-05-26 16:53:49'),
+(16, '3478822436\n', 5, 'Jeric', 'heric@gmail.com', '1525252', '2021-05-26 11:01:00', '2021-05-27 11:01:00', 'Checks', 0, 2, '2021-05-26 17:07:24'),
+(17, '3168050312\n', 5, 'Jeric Baterna', 'baterna@gmail.com', '454644', '2021-05-28 11:22:00', '2021-06-04 11:22:00', 'Palawan', 3, 1, '2021-05-26 17:24:59');
 
 -- --------------------------------------------------------
 
@@ -123,7 +111,8 @@ CREATE TABLE `rooms` (
 
 INSERT INTO `rooms` (`id`, `room`, `category_id`, `status`) VALUES
 (1, 'Room-101', 3, 0),
-(4, 'Room-103', 3, 1);
+(4, 'Room-103', 3, 0),
+(5, 'Room-104', 3, 0);
 
 -- --------------------------------------------------------
 
@@ -146,7 +135,8 @@ INSERT INTO `room_categories` (`id`, `name`, `price`, `cover_img`) VALUES
 (2, 'Deluxe Room', 500, '1600480260_4.jpg'),
 (3, 'Single Room', 120, '1600480680_2.jpg'),
 (4, 'Family Room', 350, '1600480680_room-1.jpg'),
-(6, 'Twin Bed Room', 200, '1600482780_3.jpg');
+(6, 'Twin Bed Room', 200, '1600482780_3.jpg'),
+(7, 'Twin Bird', 5200, '1622020680_hen.png');
 
 -- --------------------------------------------------------
 
@@ -209,12 +199,6 @@ ALTER TABLE `checked`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `check_in`
---
-ALTER TABLE `check_in`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `rooms`
 --
 ALTER TABLE `rooms`
@@ -246,31 +230,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `book_record`
 --
 ALTER TABLE `book_record`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `checked`
 --
 ALTER TABLE `checked`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT for table `check_in`
---
-ALTER TABLE `check_in`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `room_categories`
 --
 ALTER TABLE `room_categories`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `system_settings`
