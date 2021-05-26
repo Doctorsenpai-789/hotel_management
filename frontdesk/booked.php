@@ -1,5 +1,4 @@
 <?php include('db_connect.php'); 
-
 $cat = $conn->query("SELECT * FROM room_categories");
 $cat_arr = array();
 while($row = $cat->fetch_assoc()){
@@ -12,7 +11,7 @@ while($row = $room->fetch_assoc()){
 }
 ?>
 <div class="container-fluid">
-	<div class="col-lg-12">
+	<div class="col-lg-12  mt-5">
 		<div class="row mt-3">
 			<div class="col-md-12">
 				<div class="card">

@@ -62,6 +62,7 @@ while($row = $cat->fetch_assoc()){
 				<label for="date_in">Check-in Date</label>
 				<input type="date" name="date_in" id="date_in" class="form-control" value="<?php echo isset($meta['date_in']) ? date("Y-m-d",strtotime($meta['date_in'])): date("Y-m-d") ?>" required>
 		</div>
+		
 			<div class="form-group col-md-6">
 			<label for="date_in_time">Check-in Time</label>
 				<input type="time" name="date_in_time" id="date_in_time" class="form-control" value="<?php echo isset($meta['date_in']) ? date("H:i",strtotime($meta['date_in'])): date("H:i") ?>" required>
@@ -125,24 +126,24 @@ while($row = $cat->fetch_assoc()){
 <script>
 	$('#manage-check').submit(function(e){
 		e.preventDefault();
-		start_load();
+		start_load()
 		
 
-		$.ajax({
-			url:'ajax.php?action=save_check-in',
-			method:'POST',
-			data:$(this).serialize(),
-			success:function(resp){
-				if(resp >0){
-					alert_toast("Data successfully saved",'success')
-					uni_modal("Check-in Details","manage_check_out.php?id="+resp)
-					setTimeout(function(){
-					end_load()
-					},1500)
+			$.ajax({
+				url:'ajax.php?action=save_check-in',
+				method:'POST',
+				data:$(this).serialize(),
+				success:function(resp){
+					if(resp >0){
+						alert_toast("Data successfully saved",'success')
+						uni_modal("Check-in Details","manage_check_out.php?id="+resp)
+						setTimeout(function(){
+						end_load()
+						},1500)
+					}
 				}
-			}
-		})
+			})
+
+		}
 		
-	
-	})
 </script>

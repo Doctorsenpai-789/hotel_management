@@ -12,6 +12,8 @@ Class Action {
     
     $this->db = $conn;
 	}
+
+	
 	function __destruct() {
 	    $this->db->close();
 	    ob_end_flush();
@@ -39,7 +41,7 @@ Class Action {
 		foreach ($_SESSION as $key => $value) {
 			unset($_SESSION[$key]);
 		}
-		header("location: login.php");
+		header("location:login.php");
 	}
 
 	function save_user(){
@@ -141,12 +143,13 @@ Class Action {
 		$data = " room_id = '$rid' ";
 		$data .= ", name = '$name' ";
 		$data .= ", contact_no = '$contact' ";
-		
+		$data .= ", email = '$email' ";
 		$data .= ", status = 1 ";
-
 		$data .= ", date_in = '".$date_in.' '.$date_in_time."' ";
 		$out= date("Y-m-d H:i",strtotime($date_in.' '.$date_in_time.' +'.$days.' days'));
 		$data .= ", date_out = '$out' ";
+		$payment_Method = $data .= ", payment_Method ='$payment_Method' ";
+		
 		$i = 1;
 		while($i== 1){
 			$ref  = sprintf("%'.04d\n",mt_rand(1,9999999999));

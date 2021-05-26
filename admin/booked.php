@@ -42,7 +42,7 @@ while($row = $room->fetch_assoc()){
 											<button class="btn btn-sm btn-primary check_out" type="button" data-id="<?php echo $row['id'] ?>">View</button>
 									</td>
 								</tr>
-							<?php endwhile; ?>
+							    <?php endwhile; ?>
 							</tbody>
 						</table>
 					</div>

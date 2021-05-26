@@ -48,8 +48,8 @@ margin-top:-13px;
 												<label for="check-out">Check-out Date</label>
 												<input type="text" class="form-control datepicker" name="date_out" autocomplete="off" value="<?php echo isset($date_out) ? date("Y-m-d",strtotime($date_out)) : "" ?>">
 											</div>
-											<div class="col-md-4 mb-3" style="margin-top:31px;height:20px;">
-												   <button class="btn-btn-block btn-primary rounded w-100 p-1">Check Availability</button>
+											<div class="col-md-4 mb-3" style="margin-top:29px;height:20px;">
+										       	<button class="btn  rounded w-100 text-white" style="background:#f4623a">Check Availability</button>
 									        </div>
 										</div>
 									</form>
@@ -83,7 +83,7 @@ margin-top:-13px;
 											<?php echo $cat_arr[$row['category_id']]['name'] ?>
 										</b></h4>
 										<div class="align-self-end mt-5">
-											<button class="btn btn-primary book_now" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
+											<button class="btn book_now text-white"  style="background:#f4623a" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
 										</div>
 									</div>
 								

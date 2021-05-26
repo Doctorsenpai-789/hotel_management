@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FrontDesk | Senpai Hotel</title>
+  <title>Admin | Hotel Management System</title>
  	
 
 <?php include('./header.php'); ?>
@@ -37,7 +37,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 	}
 	.card{
         width: 100%;
-        height: 350px;
+        height: 400px;
         margin: 0 auto;
         /* background-color: rgba(255,255,255,0.2); */
 		background: #0000002e;
@@ -95,6 +95,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
   			 <div class="card col-md-4 ">
 			   
   				<div class="card-body">
+					<br>
   					<form id="login-form" >
   						<div class="form-group">
 							  <i class="fas fa-user"></i>
@@ -112,6 +113,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 						    <button class="btn-sm btn-block btn-wave col-md-4 btn-primary rounded">Login</button>	
 						</center>
   					</form>
+					  <br>	
   				</div>
 				 
   			  </div>
@@ -141,7 +143,7 @@ $query = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
 			},
 			success:function(resp){
 				if(resp == 1){
-					location.href ='index.php?page=home';
+					location.href ='index.php?page=booked';
 				}else if(resp == 2){
 					location.href ='index.php?page=booked';
 				}else{

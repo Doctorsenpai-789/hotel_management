@@ -5,9 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-
-  <title>FrontDesk | Senpai Hotel</title>
-
+  <title>Motel Management System</title>
  	
 
 <?php
@@ -18,10 +16,13 @@
 ?>
 
 </head>
+
 <style>
 
 	body{
         background: #80808045;
+        font-family: 'Montserrat';
+        color: #444444;
   }
 
 </style>
@@ -34,21 +35,12 @@
     </div>
   </div>
   <main id="view-panel" >
-<<<<<<< HEAD
 
-      
 
       <?php $page = isset($_GET['page']) ? $_GET['page'] :'book'; ?>
      	<?php include $page.'.php' ?>
+    
 
-  	
-=======
-
-      <?php $page = isset($_GET['page']) ? $_GET['page'] :'book'; ?>
-     	<?php include $page.'.php' ?>
-      <?php $page = isset($_GET['page']) ? $_GET['page'] :'home'; ?>
-    	<?php include $page.'.php' ?>
->>>>>>> 0c7101cffbf7e8b5efd55d0f75570ab74a06e188
 
   </main>
 
@@ -80,13 +72,14 @@
       <div class="modal-body">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success" id='submit' onclick="$('#uni_modal form').submit()">Save</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
       </div>
     </div>
   </div>
 </body>
+
 <script>
 	 window.start_load = function(){
     $('body').prepend('<di id="preloader2"></di>')
