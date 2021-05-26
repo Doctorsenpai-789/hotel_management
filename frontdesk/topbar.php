@@ -27,7 +27,11 @@
         <large><b><?php echo $_SESSION['setting_hotel_name']; ?></b></large>
       </div>
 	  	<div class="col-md-2 float-right text-white mt-2">
+<<<<<<< HEAD
 	  		<a href="../admin/ajax.php?action=logout" class="text-white ml-5"><?php echo $_SESSION['login_name'] ?> <i class="fa fa-power-off ml-2"></i></a>
+=======
+	  		<a href="ajax.php?action=logout" class="text-white ml-5"><?php echo $_SESSION['login_name'] ?> <i class="fa fa-power-off ml-2"></i></a>
+>>>>>>> b3eb3a2cd0a8514ccb8714023ebb0e1732c103f7
 	    </div>
     </div>
   </div>

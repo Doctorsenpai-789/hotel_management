@@ -87,15 +87,15 @@ margin-top:-13px;
                                         <h3>
                                             <b><?php echo 'PHP '.number_format($cat_arr[$row['category_id']]['price'],2) ?></b><span> / per day</span></h3>
              
-                                        <h4><b>
-                                            <?php echo $cat_arr[$row['category_id']]['name'] ?>
-                                        </b></h4>
-                                        <div class="align-self-end mt-5">
-                                            <button class="btn text-white book_now"  style="background:#f4623a" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
-                                        </div>
-                                    </div>
-                                
-                                </div>
+										<h4><b>
+											<?php echo $cat_arr[$row['category_id']]['name'] ?>
+										</b></h4>
+										<div class="align-self-end mt-5">
+											<button class="btn book_now text-white"  style="background:#f4623a" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
+										</div>
+									</div>
+								
+							    </div>
 
                             </div>
                         </div>
