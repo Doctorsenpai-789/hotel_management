@@ -59,4 +59,3 @@ if($action == "save_book"){
 	if($save)
 		echo $save;
 }
-

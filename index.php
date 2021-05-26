@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <?php
         session_start();
+        
         include('header.php');
         include('admin/db_connect.php');
 
@@ -12,6 +14,15 @@
         }
     ?>
 
+    <style>
+
+    body {
+      font-family: 'Montserrat';
+    }
+
+    </style>
+
+    
     <body id="page-top">
 
         <!-- Navigation-->
@@ -22,14 +33,21 @@
 
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-4" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_hotel_name'] ?></a>
+                <b><a class="navbar-brand js-scroll-trigger" href="./"><?php echo $_SESSION['setting_hotel_name'] ?></a></b>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
+<<<<<<< HEAD
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home" style="font-size: 16px;">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list" style="font-size: 16px;">Rooms</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Admin</a></li>
+=======
+                        <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="index.php?page=home" style="font-size: 16px;">Home</a></strong></li>
+                        <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="index.php?page=list" style="font-size: 16px;">Rooms</a></strong></li>
+                        <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></strong></li>
+                        <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Login</a></strong></li>
+>>>>>>> 1743fbd630d61be56391be9a5e6b985a3ad18263
                     </ul>
                 </div>
             </div>
@@ -37,8 +55,10 @@
     </nav>
     
     <?php 
-    $page = isset($_GET['page']) ?$_GET['page'] : "home";
-    include $page.'.php';
+
+      $page = isset($_GET['page']) ?$_GET['page'] : "home";
+      include $page.'.php';
+
     ?>
        
     <!-- confirmation modal -->
@@ -78,11 +98,10 @@
 
 <br/>
   <!-- Footer -->
-  <footer class="text-center text-lg-start bg-dark text-white" style="">
+  <footer class="text-center text-lg-start bg-dark text-white w-100" style="">
       <!-- Section: Social media -->
-      <section
-        class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-      >
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
         <!-- Left -->
         <div class="me-5 d-none d-lg-block" data-aos="fade-up">
           <span>Get connected with us on social networks:</span>
@@ -115,7 +134,8 @@
       <!-- Section: Social media -->
 
       <!-- Section: Links  -->
-      <section class="">
+      <section class="w-100">
+
         <div class="container text-center text-md-start mt-5">
           <!-- Grid row -->
           <div class="row mt-3">
@@ -123,7 +143,7 @@
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-left" data-aos="fade-up-right">
               <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i> Senpai Motel
+                <i class="fas fa-gem me-3"></i> Senpai Hotel
               </h6>
               <p>
                 Experience the fresh and comfort living by staying our motel.
@@ -138,16 +158,16 @@
                 Rooms
               </h6>
               <p>
-                <a href="#!" class="text-reset">Twin Room</a>
+                <a href="list.php" class="text-reset">Twin Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Family Room</a>
+                <a href="list.php" class="text-reset">Family Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Single Room</a>
+                <a href="list.php" class="text-reset">Single Room</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Couple Room</a>
+                <a href="list.php" class="text-reset">Couple Room</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -162,13 +182,13 @@
                 <a href="" class="text-reset">Featured Rooms</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Book Now</a>
+                <a href="index.php" class="text-reset">Book Now</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">About Us</a>
+                <a href="about.php" class="text-reset">About Us</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Help</a>
+                <a href="index.php" class="text-reset">Help</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -179,10 +199,14 @@
               <h6 class="text-uppercase fw-bold mb-4">
                 Contact
               </h6>
-              <p><i class="fas fa-home me-3"></i>Medellin, Cebu</p>
+              <p><i class="fas fa-home me-3"></i> Medellin, Cebu</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
+<<<<<<< HEAD
                 princesenpaihotel@gmail.com
+=======
+                senpaihotel@gmail.com
+>>>>>>> 1743fbd630d61be56391be9a5e6b985a3ad18263
               </p>
               <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>

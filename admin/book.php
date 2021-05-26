@@ -60,6 +60,7 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 	$('#manage-check').submit(function(e){
 		e.preventDefault();
 		start_load()
+<<<<<<< HEAD
 			$.ajax({
 				url:'admin/ajax.php?action=save_book',
 				method:'POST',
@@ -77,5 +78,33 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 			
 		 }
 			
+=======
+		let name = $('#name').val();
+		let contact = $('#contact').val();
+		let email = $('#email').val();
+        if(name!="" && contact != "" && email != ""){
+
+
+		$.ajax({
+			url:'admin/ajax.php?action=save_book',
+			method:'POST',
+			data:$(this).serialize(),
+			success:function(resp){
+				if(resp >0){
+					alert_toast("Data successfully saved",'success')
+					setTimeout(function(){
+					end_load()
+					$('.modal').modal('hide')
+					},1500)
+				}
+			}
+		})
+		}
+		else{
+			alert("require all the fields");
+
+
+		}
+>>>>>>> 1743fbd630d61be56391be9a5e6b985a3ad18263
 	})
 </script>
