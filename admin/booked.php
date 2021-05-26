@@ -1,14 +1,17 @@
 <?php include('db_connect.php'); 
+
 $cat = $conn->query("SELECT * FROM room_categories");
 $cat_arr = array();
 while($row = $cat->fetch_assoc()){
 	$cat_arr[$row['id']] = $row;
 }
+
 $room = $conn->query("SELECT * FROM rooms");
 $room_arr = array();
 while($row = $room->fetch_assoc()){
 	$room_arr[$row['id']] = $row;
 }
+
 ?>
 <div class="container-fluid">
 	<div class="col-lg-12  mt-5">

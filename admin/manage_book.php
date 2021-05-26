@@ -30,7 +30,7 @@ if($_GET['id']){
 <div class="container-fluid">
 	<table class="table">
      
-		  <td>	<p><b>Room : </b></p></td>
+		  <td><p><b>Room : </b></p></td> 
 		  <td><?php echo isset($room['room']) ? $room['room'] : 'NA' ?></td>
 	 
 	  <tr>
