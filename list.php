@@ -73,7 +73,7 @@ margin-top:-13px;
 							<div class="card-body">
 								<div class="row ">
 									<div class="col-md-5">
-										<img src="assets/img/<?php echo $cat_arr[$row['category_id']]['cover_img'] ?>" alt="">
+										<img  src="assets/img/<?php echo $cat_arr[$row['category_id']]['cover_img'] ?>" alt="">
 									</div>
 									<div class="col-md-5">
 										<h3>
@@ -83,7 +83,7 @@ margin-top:-13px;
 											<?php echo $cat_arr[$row['category_id']]['name'] ?>
 										</b></h4>
 										<div class="align-self-end mt-5">
-											<button class="btn book_now text-white"  style="background:#f4623a" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
+											<button class="btn text-white book_now"  style="background:#f4623a" type="button" data-id="<?php echo $row['category_id'] ?>">Book now</button>
 										</div>
 									</div>
 								

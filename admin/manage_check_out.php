@@ -76,7 +76,7 @@ if($_GET['id']){
 	  <tr>
 		  <!-- total = price times days -->
 		  <td><p><b>Total Amount: </b></p></td>
-		  <td><?php echo '$'.number_format($cat['price'] * $calc_days ,2) ?></td>
+		  <td><?php echo 'Php  '.number_format($cat['price'] * $calc_days ,2) ?></td>
 	  </tr>
 	</table>
 	<hr>

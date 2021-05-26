@@ -66,8 +66,8 @@
                 	?>
                     <div class=" col-sm-3 m-3 ml-5" data-aos="fade-up">
                         <a class="portfolio-box" href="#">
-                            <img class="img-fluid m-2" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;" src="assets/img/<?php echo $row['cover_img'] ?>" />
-                            <div class="portfolio-box-caption mt-5" style="background-color:#f4623a ;height:238px;width:353px;">
+                            <img class="img-fluid m-2" style=" height:250px;width:500px;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;" src="assets/img/<?php echo $row['cover_img'] ?>" />
+                            <div class="portfolio-box-caption mt-5" style="background-color:#f4623a ;height:260px;width:343px;">
 							    <br>
 								<br>
 								<div class="container mt-5" >

@@ -30,7 +30,6 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list" style="font-size: 16px;">Rooms</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Admin</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./frontdesk/index.php?page=admin" style="font-size: 16px;">FrontDesk</a></li>
                     </ul>
                 </div>
             </div>
@@ -160,7 +159,7 @@
                 Useful links
               </h6>
               <p>
-                <a href="" class="text-reset">Fetatured Rooms</a>
+                <a href="" class="text-reset">Featured Rooms</a>
               </p>
               <p>
                 <a href="#!" class="text-reset">Book Now</a>
@@ -183,7 +182,7 @@
               <p><i class="fas fa-home me-3"></i>Medellin, Cebu</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
-                senpaimotel@gmail.com
+                princesenpaihotel@gmail.com
               </p>
               <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
@@ -198,7 +197,7 @@
       <!-- Copyright -->
       <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2021 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">senpaiHotel.com</a>
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">princesenpaiHotel.com</a>
       </div>
       <!-- Copyright -->
     </footer>
