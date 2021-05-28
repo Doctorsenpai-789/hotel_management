@@ -77,18 +77,6 @@ margin-top:-13px;
 
                         ?>
                         
-<<<<<<< HEAD
-			
-						<div class="card item-rooms mb-3 mt-5"  data-aos="fade-up" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
-							<div class="card-body">
-								<div class="row ">
-									<div class="col-md-5">
-										<img  src="assets/img/<?php echo $cat_arr[$row['category_id']]['cover_img'] ?>" alt="">
-									</div>
-									<div class="col-md-5">
-										<h3>
-											<b><?php echo 'PHP '.number_format($cat_arr[$row['category_id']]['price'],2) ?></b><span> / per day</span></h3>
-=======
                         <div class="card item-rooms mb-3 mt-5"  data-aos="fade-up" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
                             <div class="card-body">
                                 <div class="row ">
@@ -98,7 +86,6 @@ margin-top:-13px;
                                     <div class="col-md-5">
                                         <h3>
                                             <b><?php echo 'PHP '.number_format($cat_arr[$row['category_id']]['price'],2) ?></b><span> / per day</span></h3>
->>>>>>> 1743fbd630d61be56391be9a5e6b985a3ad18263
              
 										<h4><b>
 											<?php echo $cat_arr[$row['category_id']]['name'] ?>
