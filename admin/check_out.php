@@ -56,6 +56,7 @@ while($row = $room->fetch_assoc()){
 </div>
 
 <script>
+
 	$('table').dataTable()
 	$('.check_out').click(function(){
 		uni_modal("Check Out","manage_check_out.php?checkout=1&id="+$(this).attr("data-id"))

@@ -71,7 +71,7 @@ margin-top:-13px;
 							
 						}
 						
-                        $qry = $conn->query("SELECT distinct(category_id),category_id from rooms where id not in (SELECT room_id from checked where '$date_in' BETWEEN date(date_in) and date(date_out) and '$date_out' BETWEEN date(date_in) and date(date_out)  )");
+                        $qry = $conn->query("SELECT distinct(category_id),category_id from rooms where `status` = 0 AND id not in (SELECT room_id from checked where '$date_in' BETWEEN date(date_in) and date(date_out) and '$date_out' BETWEEN date(date_in) and date(date_out)  )");
 						
 						while( $row = $qry->fetch_assoc()):
 
@@ -81,7 +81,7 @@ margin-top:-13px;
                             <div class="card-body">
                                 <div class="row ">
                                     <div class="col-md-5">
-                                        <img src="assets/img/<?php echo $cat_arr[$row['category_id']]['cover_img'] ?>" alt="">
+                                        <img src="assets/img/<?php echo $cat_arr[$row['category_id']]['cover_img'] ?>" alt="" style="width:100%; height:80; ">
                                     </div>
                                     <div class="col-md-5">
                                         <h3>

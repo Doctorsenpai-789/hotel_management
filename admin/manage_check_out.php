@@ -82,8 +82,12 @@ if($_GET['id']){
 	<hr>
 		<div class="row">
 			<?php if(isset($_GET['checkout']) && $status != 2): ?>
+
 				<div class="col-md-3">
-					<button type="button" class="btn btn-primary" id="checkout">Checkout</button>
+					<button type="button" class="btn btn-primary" id="checkin">Checkin</button>
+				</div>
+				<div class="col-md-3">
+					<button type="button" class="btn btn-info" id="checkout">Checkout</button>
 				</div>
 				<div class="col-md-3">
 					<button type="button" class="btn btn-success ml-3" id="edit_checkin">Edit</button>
@@ -99,9 +103,11 @@ if($_GET['id']){
 	$(document).ready(function(){
 		
 	})
+
 	$('#edit_checkin').click(function(){
 		uni_modal("Edit Check In","manage_check_in.php?id=<?php echo $id ?>&rid=<?php echo $room_id ?>")
 	})
+   
 	$('#checkout').click(function(){
 		start_load()
 		$.ajax({
@@ -109,7 +115,7 @@ if($_GET['id']){
 			method:'POST',
 			data:{id:'<?php echo $id ?>',rid:'<?php echo $room_id ?>'},
 			success:function(resp){
-				if(resp ==1){
+				if(resp == 1){
 					alert_toast("Data successfully saved",'success')
 					setTimeout(function(){
 						location.reload()
@@ -118,4 +124,23 @@ if($_GET['id']){
 			}
 		})
 	})
-</script>
+
+    $('#checkin').click(function(){
+		start_load()
+		$.ajax({
+			url:'ajax.php?action=save_checkin',
+			method:'POST',
+			data:{id:'<?php echo $id ?>',rid:'<?php echo $room_id ?>'},
+			success:function(resp){
+                 console.log(resp);
+				if(resp == 1){
+					alert_toast("Data successfully saved",'success')
+					setTimeout(function(){
+						location.reload()
+					},1500)
+				}
+			}
+		})
+	})
+
+  </script>

@@ -59,3 +59,8 @@ if($action == "save_book"){
 	if($save)
 		echo $save;
 }
+if($action == "save_checkin"){
+	$save = $crud->save_checkin();
+	if($save)
+		echo $save;
+}

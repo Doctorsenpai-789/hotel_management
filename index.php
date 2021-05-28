@@ -37,17 +37,10 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-<<<<<<< HEAD
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=home" style="font-size: 16px;">Home</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=list" style="font-size: 16px;">Rooms</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Admin</a></li>
-=======
                         <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="index.php?page=home" style="font-size: 16px;">Home</a></strong></li>
                         <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="index.php?page=list" style="font-size: 16px;">Rooms</a></strong></li>
                         <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="index.php?page=about" style="font-size: 16px;">About</a></strong></li>
                         <li class="nav-item"><strong><a class="nav-link js-scroll-trigger" href="./admin/index.php?page=admin" style="font-size: 16px;">Login</a></strong></li>
->>>>>>> 1743fbd630d61be56391be9a5e6b985a3ad18263
                     </ul>
                 </div>
             </div>
@@ -202,11 +195,7 @@
               <p><i class="fas fa-home me-3"></i> Medellin, Cebu</p>
               <p>
                 <i class="fas fa-envelope me-3"></i>
-<<<<<<< HEAD
-                princesenpaihotel@gmail.com
-=======
                 senpaihotel@gmail.com
->>>>>>> 1743fbd630d61be56391be9a5e6b985a3ad18263
               </p>
               <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>

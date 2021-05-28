@@ -90,7 +90,9 @@ while($row = $cat->fetch_assoc()){
 		
 	</form>
 </div>
+
 <script>
+
 	$('#manage-check').submit(function(e){
 		e.preventDefault();
 		start_load()
@@ -101,7 +103,7 @@ while($row = $cat->fetch_assoc()){
 				method:'POST',
 				data:$(this).serialize(),
 				success:function(resp){
-					if(resp >0){
+					if(resp > 0){
 						alert_toast("Data successfully saved",'success')
 						uni_modal("Check-in Details","manage_check_out.php?id="+resp)
 						setTimeout(function(){

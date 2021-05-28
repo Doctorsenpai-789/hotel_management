@@ -138,7 +138,21 @@ Class Action {
 			return 1;
 	}
 
+
+    function save_checkin(){
+
+		extract($_POST);
+
+		$save = $this->db->query("UPDATE checked set status = 1 where id = ".$id);
+		if($save){
+			$this->db->query("UPDATE rooms set status = 1 where id=".$rid);
+				return 1;		
+		}
+
+	}
+
 	function save_check_in(){
+
 		extract($_POST);
 		$data = " room_id = '$rid' ";
 		$data .= ", name = '$name' ";
@@ -151,6 +165,7 @@ Class Action {
 		$payment_Method = $data .= ", payment_Method ='$payment_Method' ";
 		
 		$i = 1;
+
 		while($i== 1){
 			$ref  = sprintf("%'.04d\n",mt_rand(1,9999999999));
 			if($this->db->query("SELECT * FROM checked where ref_no ='$ref'")->num_rows <= 0)
@@ -165,6 +180,7 @@ Class Action {
 		}else{
 			$save = $this->db->query("UPDATE checked set ".$data." where id=".$id);
 		}
+
 		if($save){
 
 			$this->db->query("UPDATE rooms set status = 1 where id=".$rid);
@@ -173,6 +189,7 @@ Class Action {
 	}
 
 	function save_checkout(){
+
 		extract($_POST);
 			$save = $this->db->query("UPDATE checked set status = 2 where id = ".$id);
 			if($save){
@@ -183,6 +200,8 @@ Class Action {
 			}
 
 	}
+
+	
 
 	function save_book(){
 		extract($_POST);
@@ -200,10 +219,7 @@ Class Action {
 		
 		
 		$data .= ", payment_Method ='$payment_Method'";
-		//$payment_Method = $data .= ", payment_Method ='$payment_Method' ";
 		
-		
-
 
 		$i = 1;
 		while($i== 1){
@@ -214,6 +230,7 @@ Class Action {
 		$data .= ", ref_no = '$ref' ";
 
 			$save = $this->db->query("INSERT INTO checked set ".$data);
+			$save = $this->db->query("INSERT INTO book_record set ".$data);
 			$id = $this->db->insert_id;
 		
 		if($save){
