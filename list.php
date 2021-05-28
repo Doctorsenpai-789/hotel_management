@@ -44,7 +44,7 @@ margin-top:-13px;
                                         <div class="form-row">
                                             <div class="col-md-4 mb-3"  id="check">
                                                 <label for="check-in">Check-in Date</label>
-                                                <input type="text" class="form-control datepicker" name="date_in" autocomplete="off" value="<?php echo isset($date_in) ? date("Y-m-d",strtotime($date_in)) : "" ?>">
+                                                <input type="text"  class="form-control datepicker" name="date_in" autocomplete="off" value="<?php echo isset($date_in) ? date("Y-m-d",strtotime($date_in)) : "" ?>">
                                             </div>
                                             <div class="col-md-4 mb-3">
                                                 <label for="check-out">Check-out Date</label>
@@ -115,4 +115,12 @@ margin-top:-13px;
         uni_modal('Book','admin/book.php?in=<?php echo $date_in ?>&out=<?php echo $date_out ?>&cid='+$(this).attr('data-id'))
 	})
 	
+</script>
+
+<script type="text/javascript">
+   
+    $('.datepicker').datepicker({ 
+        startDate: new Date()
+    });
+  
 </script>
