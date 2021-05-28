@@ -191,7 +191,7 @@ Class Action {
 		$data .= ", email = '$email' ";
 		$data .= ", contact_no = '$contact' ";
        
-		$data .= ", status = 0 ";
+		$data .= ", status = 0";
 		
 
 		$data .= ", date_in = '".$date_in.' '.$date_in_time."' ";
@@ -199,8 +199,8 @@ Class Action {
 		$data .= ", date_out = '$out' ";
 		
 		
-		
-		$payment_Method = $data .= ", payment_Method ='$payment_Method' ";
+		$data .= ", payment_Method ='$payment_Method'";
+		//$payment_Method = $data .= ", payment_Method ='$payment_Method' ";
 		
 		
 
