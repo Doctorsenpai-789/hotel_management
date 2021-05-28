@@ -1,4 +1,5 @@
 <style>
+
 	img#cimg,.cimg{
 		max-height: 10vh;
 		max-width: 6vw;
@@ -6,6 +7,7 @@
 	td{
 		vertical-align: middle !important;
 	}
+	
 </style>
 
 <?php include 'db_connect.php';?>

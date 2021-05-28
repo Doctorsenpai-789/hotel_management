@@ -43,7 +43,7 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 	    <input type="number" min ="1" name="days" id="days" class="form-control" value="<?php echo isset($_GET['in']) ? $calc_days: 1 ?>" required readonly>
     </div>
     <div class="form-group col-md-6">
-	       <label for="name" >Payment Method</label>
+	       <label for="payment_Method" >Payment Method</label>
 			<select id="payment_Method" name ="payment_Method"   value="<?php echo isset($_GET['payment_Method']) ? $_GET['payment_Method']: '' ?>" class="form-control">
 				<option name ="palawan" id="palawan"  >Palawan</option>
 				<option name ="g-cash"  id="g-cash"  >G-cash</option>
@@ -60,6 +60,25 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 	$('#manage-check').submit(function(e){
 		e.preventDefault();
 		start_load()
+<<<<<<< HEAD
+			$.ajax({
+				url:'admin/ajax.php?action=save_book',
+				method:'POST',
+				data:$(this).serialize(),
+				success:function(resp){
+					if(resp >0){
+						alert_toast("Data successfully saved",'success')
+						setTimeout(function(){
+						end_load()
+						$('.modal').modal('hide')
+						},1500)
+					}
+				}
+			})
+			
+		 }
+			
+=======
 		let name = $('#name').val();
 		let contact = $('#contact').val();
 		let email = $('#email').val();
@@ -86,5 +105,6 @@ $calc_days = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ;
 
 
 		}
+>>>>>>> 1743fbd630d61be56391be9a5e6b985a3ad18263
 	})
 </script>
