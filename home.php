@@ -10,7 +10,7 @@
 
     header.masthead {
 	/* background: url("assets/img/<?php echo $_SESSION['setting_cover_img'] ?>");  */
-	background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg'); */
+	background-image:url('https://cdn1.tablethotels.com/media/ecs/global/email/assets/20200402_Zoom/TabletHotels_Jefferson-Mirrored-1.jpg'); 
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	margin-top:-23px;
@@ -68,11 +68,12 @@
                     <div class=" col-sm-3 m-3 ml-5" data-aos="fade-up">
                         <a class="portfolio-box" href="#">
                             <img class="img-fluid m-2" style=" height:250px;width:500px;box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;" src="assets/img/<?php echo $row['cover_img'] ?>" />
-                            <div class="portfolio-box-caption mt-5" style="background-color:#f4623a ;height:260px;width:343px;">
+                            <div class="portfolio-box-caption mt-5" style="background-color:#f4623a ;height:260px;width:378px;">
 							    <br>
 								<br>
 								<div class="container mt-5" >
 									<div class="row justify-content-center">
+									<?php echo ($row['name']) ?> 
 									</div>
 									<div class="row justify-content-center">
 									     <h6><?php echo "PHP ".number_format($row['price'],2) ?>  per day</h6>
@@ -87,4 +88,11 @@
             </div>
     </div>
 
+	<script type="text/javascript">
+   
+   $('.datepicker').datepicker({ 
+	   startDate: new Date()
+   });
+ 
+   </script> 
 

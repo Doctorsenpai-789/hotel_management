@@ -19,8 +19,8 @@ while($row = $room->fetch_assoc()){
 						<table class="table table-bordered">
 							<thead>
 								<th>#</th>
-								<th>Category</th>
-								<th>Room</th>
+								<!-- <th>Category</th>
+								<th>Room</th> -->
 								<th>Reference</th>
 								<th>Status</th>
 								<th>Action</th>
@@ -28,13 +28,16 @@ while($row = $room->fetch_assoc()){
 							<tbody>
 								<?php 
 								$i = 1;
-								$checked = $conn->query("SELECT * FROM checked where status != 0 order by status desc, id asc ");
+								$checked = $conn->query("SELECT * FROM checked where status != 0  order by status desc, id asc ");
 								while ($row = $checked->fetch_assoc()):
 								?>
 								<tr>
 									<td class="text-center"><?php echo $i++ ?></td>
-									<td class="text-center"><?php echo $cat_arr[$room_arr[$row['room_id']]['category_id']]['name'] ?></td>
-									<td class=""><?php echo $room_arr[$row['room_id']]['room'] ?></td>
+									<!-- <td class="text-center"><?php echo $cat_arr[$room_arr[$row['room_id']]['category_id']]['name'] ?></td>
+									<td class=""><?php echo $room_arr[$row['room_id']]['room'] ?></td> -->
+
+									<!-- <td class="text-center"><?php echo $cat_arr[$room_arr[$row['room_id']]['category_id']]['name'] ?></td>
+									<td class=""><?php echo $room_arr[$row['room_id']]['room'] ?></td> -->
 									<td class=""><?php echo $row['ref_no'] ?></td>
 									<?php if($row['status'] == 1): ?>
 										<td class="text-center"><span class="badge badge-warning">Checked-In</span></td>
@@ -45,7 +48,15 @@ while($row = $room->fetch_assoc()){
 											<button class="btn btn-sm btn-primary check_out" type="button" data-id="<?php echo $row['id'] ?>">View</button>
 									</td>
 								</tr>
-							<?php endwhile; ?>
+							<?php endwhile;
+							
+							
+							
+							?>
+							
+
+
+
 							</tbody>
 						</table>
 					</div>

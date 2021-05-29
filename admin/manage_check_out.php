@@ -30,8 +30,8 @@ if($_GET['id']){
 <div class="container-fluid">
 	<table class="table">
      
-		  <td>	<p><b>Room : </b></p></td>
-		  <td><?php echo isset($room['room']) ? $room['room'] : 'NA' ?></td>
+		  <!-- <td>	<p><b>Room : </b></p></td>
+		  <td><?php echo isset($room['room']) ? $room['room'] : 'NA' ?></td> -->
 	 
 	  <tr>
 		  <td><p><b>Room Category : </b></p></td>
@@ -84,10 +84,10 @@ if($_GET['id']){
 			<?php if(isset($_GET['checkout']) && $status != 2): ?>
 
 				<div class="col-md-3">
-					<button type="button" class="btn btn-primary" id="checkin">Checkin</button>
+					<button type="button" class="btn btn-primary" id="checkin" >Checkin</button>
 				</div>
 				<div class="col-md-3">
-					<button type="button" class="btn btn-info" id="checkout">Checkout</button>
+					<button type="button" class="btn btn-info" id="checkout" >Checkout</button>
 				</div>
 				<div class="col-md-3">
 					<button type="button" class="btn btn-success ml-3" id="edit_checkin">Edit</button>

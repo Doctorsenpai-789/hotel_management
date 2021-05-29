@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2021 at 11:55 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: May 29, 2021 at 12:19 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -27,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `book_record`
 --
 
-CREATE TABLE `book_record`(
+CREATE TABLE `book_record` (
   `id` int(30) NOT NULL,
   `ref_no` varchar(100) NOT NULL,
   `room_id` int(30) NOT NULL,
@@ -47,14 +48,11 @@ CREATE TABLE `book_record`(
 --
 
 INSERT INTO `book_record` (`id`, `ref_no`, `room_id`, `name`, `email`, `contact_no`, `date_in`, `date_out`, `payment_Method`, `booked_cid`, `status`, `date_updated`) VALUES
-(2, '9389943754\n', 0, 'Prince RJ', 'jeric@gmail.com', '09009', '2021-05-24 10:15:00', '2021-05-27 10:15:00', 'G-cash', 3, 0, '2021-05-24 16:16:11'),
-(3, '9919023172\n', 0, 'Antonette Baterna', 'biorebaterna@gmail.com', '143', '2021-05-24 10:26:00', '2021-05-27 10:26:00', 'Palawan', 3, 0, '2021-05-24 16:27:17'),
-(4, '7948952731\n', 0, 'james', 'jericbaternakgo@gmail.com', '2324234', '2021-05-24 10:51:00', '2021-05-27 10:51:00', 'Mhuiller', 3, 0, '2021-05-24 16:52:10'),
-(5, '6734900993\n', 0, 'james', 'odiong@gmail.com', '0912365486', '2021-05-16 10:56:00', '2021-05-30 10:56:00', 'Palawan', 3, 0, '2021-05-24 16:56:20'),
-(6, '211007394\n', 0, 'april', 'april@gmailcom', '0912365486', '2021-05-24 12:16:00', '2021-05-27 12:16:00', 'Palawan', 3, 0, '2021-05-24 18:16:49'),
-(7, '4332805561\n', 0, 'Jenette Baterna', 'jericbaternakgo@gmail.com', '09123979022', '2021-05-29 10:05:00', '2021-05-31 10:05:00', 'Credit card', 3, 0, '2021-05-26 16:05:44'),
-(8, '4370871566\n', 0, 'James Paloager', 'jamespaloager@gmail.com', '0912365486', '2021-05-29 10:39:00', '2021-06-04 10:39:00', 'G-cash', 3, 0, '2021-05-26 16:40:23'),
-(9, '2307959290\n', 0, 'Jeric Baterna', 'baterna@gmail.com', '454644', '2021-05-29 11:22:00', '2021-06-05 11:22:00', 'Credit card', 3, 0, '2021-05-26 17:23:32');
+(1, '1578827998\n', 0, 'james', 'james@gmail.com', '12', '2021-05-29 11:25:00', '2021-06-01 11:25:00', 'Palawan', 6, 0, '2021-05-29 17:25:52'),
+(2, '3347943239\n', 0, '132465', 'sdlkfj@gmail.com', '', '2021-05-29 11:40:00', '2021-06-01 11:40:00', 'Palawan', 6, 0, '2021-05-29 17:40:23'),
+(3, '943637574\n', 0, 'james', 'kjh@gmailo.com', '123', '2021-06-05 11:41:00', '2021-07-01 11:41:00', 'Palawan', 7, 0, '2021-05-29 17:41:33'),
+(4, '4785166756\n', 0, 'sdf', 'sdfs@gmail.com', '1621', '2021-06-05 11:44:00', '2021-07-01 11:44:00', 'Palawan', 3, 0, '2021-05-29 17:44:16'),
+(5, '2490642643\n', 0, 'sdf', 'sdf@gmail.com', '123', '1970-01-01 11:47:00', '2021-05-31 11:47:00', 'Palawan', 6, 0, '2021-05-29 17:47:42');
 
 -- --------------------------------------------------------
 
@@ -82,15 +80,13 @@ CREATE TABLE `checked` (
 --
 
 INSERT INTO `checked` (`id`, `ref_no`, `room_id`, `name`, `email`, `contact_no`, `date_in`, `date_out`, `payment_Method`, `booked_cid`, `status`, `date_updated`) VALUES
-(8, '2708265358\n', 1, 'james ', 'odiong@gmail.com', '0912365486', '2021-05-16 10:56:00', '2021-05-30 10:56:00', 'Palawan', 3, 2, '2021-05-24 18:26:33'),
-(9, '6124953174\n', 4, 'jeric ', 'jeric@gmail.com', '2324234', '2021-05-24 12:11:00', '2021-05-25 12:11:00', 'Palawan', 0, 2, '2021-05-26 15:11:40'),
-(11, '3295790182\n', 1, 'james', 'odiongaldrin@gmail.com', '0912365486', '2021-05-26 09:51:00', '2021-05-27 09:51:00', 'Palawan', 0, 1, '2021-05-26 15:51:46'),
-(12, '8191462239\n', 4, 'jeric', 'jericbaternakgo@gmail.com', '2324234', '2021-05-26 09:53:00', '2021-05-27 09:53:00', 'G-cash', 0, 1, '2021-05-26 15:53:23'),
-(13, '5889902917\n', 4, 'Jenette Baterna', 'jericbaternakgo@gmail.com', '09123979022', '2021-05-29 10:05:00', '2021-05-31 10:05:00', 'Credit card', 3, 1, '2021-05-26 16:33:56'),
-(14, '3809284857\n', 1, 'James Paloager', 'jamespaloager@gmail.com', '0912365486', '2021-05-29 10:39:00', '2021-06-04 10:39:00', 'Palawan', 3, 1, '2021-05-26 16:41:23'),
-(15, '180618654\n', 4, 'FrontDesk', 'odiongaldrin@gmail.com', '0912365486', '2021-05-28 10:53:00', '2021-05-29 10:53:00', 'Credit card', 0, 1, '2021-05-26 16:53:49'),
-(16, '3478822436\n', 5, 'Jeric', 'heric@gmail.com', '1525252', '2021-05-26 11:01:00', '2021-05-27 11:01:00', 'Checks', 0, 2, '2021-05-26 17:07:24'),
-(17, '3168050312\n', 5, 'Jeric Baterna', 'baterna@gmail.com', '454644', '2021-05-28 11:22:00', '2021-06-04 11:22:00', 'Palawan', 3, 1, '2021-05-26 17:24:59');
+(1, '1578827998\n', 0, 'james', 'james@gmail.com', '12', '2021-05-29 11:25:00', '2021-06-01 11:25:00', 'Palawan', 6, 2, '2021-05-29 17:26:14'),
+(2, '1899002005\n', 6, 'aldrin', 'sadfs@gmail.com', '1654', '2021-05-29 11:26:00', '2021-05-31 11:26:00', 'Palawan', 0, 2, '2021-05-29 17:31:17'),
+(3, '1480150417\n', 7, 'sdfsdfds', 'sdf@gmail.com', '123', '2021-05-29 11:38:00', '2021-05-30 11:38:00', 'Palawan', 0, 2, '2021-05-29 17:39:30'),
+(4, '3347943239\n', 0, '132465', 'sdlkfj@gmail.com', '', '2021-05-29 11:40:00', '2021-06-01 11:40:00', 'Palawan', 6, 2, '2021-05-29 17:41:00'),
+(5, '943637574\n', 0, 'james', 'kjh@gmailo.com', '123', '2021-06-05 11:41:00', '2021-07-01 11:41:00', 'Palawan', 7, 2, '2021-05-29 17:41:59'),
+(6, '4785166756\n', 0, 'sdf', 'sdfs@gmail.com', '1621', '2021-06-05 11:44:00', '2021-07-01 11:44:00', 'Palawan', 3, 2, '2021-05-29 17:46:55'),
+(7, '2490642643\n', 0, 'sdf', 'sdf@gmail.com', '123', '1970-01-01 11:47:00', '2021-05-31 11:47:00', 'Palawan', 6, 1, '2021-05-29 17:47:54');
 
 -- --------------------------------------------------------
 
@@ -110,9 +106,13 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `room`, `category_id`, `status`) VALUES
-(1, 'Room-101', 3, 0),
+(1, 'Room-101', 3, 1),
 (4, 'Room-103', 3, 0),
-(5, 'Room-104', 3, 0);
+(5, 'Room-104', 3, 0),
+(6, 'Room-105', 7, 0),
+(7, 'Room-106', 6, 0),
+(8, 'Room-108', 4, 0),
+(9, 'Room-109', 2, 0);
 
 -- --------------------------------------------------------
 
@@ -136,7 +136,7 @@ INSERT INTO `room_categories` (`id`, `name`, `price`, `cover_img`) VALUES
 (3, 'Single Room', 120, '1600480680_2.jpg'),
 (4, 'Family Room', 350, '1600480680_room-1.jpg'),
 (6, 'Twin Bed Room', 200, '1600482780_3.jpg'),
-(7, 'Twin Bird', 5200, '1622020680_hen.png');
+(7, 'Twin Bird Bed Room', 5200, '7hotel.jpg');
 
 -- --------------------------------------------------------
 
@@ -158,7 +158,7 @@ CREATE TABLE `system_settings` (
 --
 
 INSERT INTO `system_settings` (`id`, `hotel_name`, `email`, `contact`, `cover_img`, `about_content`) VALUES
-(1, 'princesenpai Motel', 'info@sample.com', '+6948 8542 623', '1600478940_hotel-cover.jpg', '&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;font-size:28px;background: transparent; position: relative;&quot;&gt;ABOUT US&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;background: transparent; position: relative; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size:28px;background: transparent; position: relative;&quot;&gt;&lt;b style=&quot;margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; text-align: justify;&quot;&gt;Lorem Ipsum&lt;/b&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; font-weight: 400; text-align: justify;&quot;&gt;&amp;nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;#x2019;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;background: transparent; position: relative; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size:28px;background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; font-weight: 400; text-align: justify;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;background: transparent; position: relative; font-size: 14px;&quot;&gt;&lt;span style=&quot;font-size:28px;background: transparent; position: relative;&quot;&gt;&lt;h2 style=&quot;font-size:28px;background: transparent; position: relative;&quot;&gt;Where does it come from?&lt;/h2&gt;&lt;p style=&quot;text-align: center; margin-bottom: 15px; padding: 0px; color: rgb(0, 0, 0); font-family: &amp;quot;Open Sans&amp;quot;, Arial, sans-serif; font-weight: 400;&quot;&gt;Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.&lt;/p&gt;&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;');
+(1, 'princesenpai Hotel', 'princesenpai@gmail.com', '+6948 8542 623', '1600478940_hotel-cover.jpg', '&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;font-size:28px;background: transparent; position: relative;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;span style=&quot;font-size:28px;background: transparent; position: relative;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center; background: transparent; position: relative;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p class=&quot;OD&quot; style=&quot;font-family: Roboto, sans-serif; width: 0px; color: rgb(38, 38, 38); font-size: 13px;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;IL&quot; style=&quot;font-family: Roboto, sans-serif;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;Up pC&quot; id=&quot;:zy.av&quot; style=&quot;font-family: Roboto, sans-serif; position: absolute; height: 32px; left: -32px; top: 0px;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;n291pb uaxL4e&quot; style=&quot;font-family: Roboto, sans-serif; position: relative;&quot;&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/a-/AOh14GjuVXRWUxL7pc69LEt5SgGQqsqotkyDo3tLZbngcw=s32-c-k-no&quot; class=&quot;Yf&quot; alt=&quot;Jeric Baterna (19105136@usc.edu.ph)&quot; draggable=&quot;false&quot; title=&quot;Jeric Baterna (19105136@usc.edu.ph)&quot; tabindex=&quot;0&quot; role=&quot;link&quot; style=&quot;box-shadow: rgb(255, 255, 255) 0px 0px 1px; border-radius: 50%; display: block; user-select: none; border-width: initial; border-color: initial; border-image: initial; width: 32px; height: 32px;&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p class=&quot;PD IF&quot; style=&quot;font-family: Roboto, sans-serif; vertical-align: top; padding: 7px 0px 1px; position: relative; border-radius: 0px 5px 5px; box-shadow: none; margin-left: 4px; color: rgb(38, 38, 38); font-size: 13px;&quot;&gt;&lt;/p&gt;&lt;p id=&quot;:zy.co&quot; class=&quot;JL&quot; style=&quot;font-family: Roboto, sans-serif; position: relative; color: rgb(38, 50, 56);&quot;&gt;&lt;/p&gt;&lt;p id=&quot;:104.ma&quot; class=&quot;Mu SP&quot; data-tooltip=&quot;May 26, 2021 at 4:58:57 PM UTC+8&quot; style=&quot;font-family: Roboto, sans-serif; font-size: 13px; line-height: 16px; margin-bottom: 6px; margin-left: 9px; margin-right: 9px; transition: opacity 0.218s ease 0s; opacity: 1; overflow-wrap: break-word; word-break: break-word;&quot;&gt;&lt;/p&gt;&lt;h2 style=&quot;text-align: center; &quot;&gt;&lt;span id=&quot;:104.co&quot; class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot;&gt;&lt;b&gt;&amp;nbsp; princesenpai Hotel&lt;/b&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;&lt;span class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot;&gt;&lt;b&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;h5 style=&quot;&quot;&gt;&lt;b&gt;&lt;span id=&quot;:104.co&quot; class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot; style=&quot;&quot;&gt;&lt;b style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; princesenpai &lt;/b&gt;Hotel&amp;nbsp;offers ultimate comfort and luxury. This is located near Nasipit Road, Talamban, Cebu City. This hotel is a beautiful combination of traditional grandeur and modern facilities.&amp;nbsp;The&amp;nbsp;255 exclusive guest rooms are furnished with a range of modern amenities such as television and internet access. International direct-dial phone and safe are also available in any of these rooms. Wake-up call facility is also available in these rooms. This provides you very comfort and relaxing moment and experiences to the guest and customers.&amp;nbsp;&lt;/span&gt;&lt;/b&gt;&lt;/h5&gt;&lt;h5 style=&quot;&quot;&gt;&lt;b&gt;&lt;span id=&quot;:104.co&quot; class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot; style=&quot;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot;&gt;Guest Evaluations:&lt;br&gt;&lt;/span&gt;&lt;/b&gt;&lt;b&gt;&lt;span class=&quot;tL8wMe EMoHub&quot; dir=&quot;ltr&quot; style=&quot;&quot;&gt;&amp;nbsp; &amp;nbsp; &ldquo;Very clean rooms, excellent meals with talented live music at dinner, friendly staff, and nice location made this a wonderful place to stay.&rdquo; &ldquo;I loved the food and the staff.&rdquo;&lt;/span&gt;&lt;/b&gt;&lt;/h5&gt;&lt;p style=&quot;font-weight: bold;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;font-weight: bold;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;font-weight: bold;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;font-weight: bold;&quot;&gt;&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -230,19 +230,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `book_record`
 --
 ALTER TABLE `book_record`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `checked`
 --
 ALTER TABLE `checked`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `room_categories`
