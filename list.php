@@ -50,8 +50,8 @@ margin-top:-13px;
                                                 <label for="check-out">Check-out Date</label>
                                                 <input type="text" class="form-control datepicker" name="date_out" autocomplete="off" value="<?php echo isset($date_out) ? date("Y-m-d",strtotime($date_out)) : "" ?>">
                                             </div>
-                                            <div class="col-md-4 mb-3" style="margin-top:29px;height:20px;">
-                                                <button class="btn  rounded w-100 text-white" style="background:#f4623a">Check Availability</button>
+                                            <div class="col-md-4 mb-3" style="margin-top:27px;height:20px;">
+                                                <button class="btn  rounded w-100 text-white mt-1" style="background:#f4623a">Check Availability</button>
                                             </div>
                                         </div>
                                     </form>

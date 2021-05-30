@@ -103,9 +103,9 @@ while($row = $cat->fetch_assoc()){
 				method:'POST',
 				data:$(this).serialize(),
 				success:function(res){
-					if(resp> 0){
+					if(res> 0){
 						alert_toast("Data successfully saved",'success')
-						uni_modal("Check-in Details","manage_check_out.php?id="+resp)
+						uni_modal("Check-in Details","manage_check_out.php?id="+res)
 						setTimeout(function(){
 						end_load()
 						},1500)
